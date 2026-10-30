@@ -8,17 +8,17 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          950: '#450a0a', // Deep Emergency Wine/Red
-          900: '#7f1d1d', // Crimson Dark Red
-          850: '#991b1b', // Strong Medical Red
-          800: '#b91c1c', // SAMU/Rescue Red
-          700: '#dc2626', // Vibrant Rescue Red
-          600: '#ef4444', // Alert Red
-          500: '#f87171', // Bright Red
+          950: '#380405', // Deep Dark Red
+          900: '#5a0609', // Dark Crimson
+          850: '#8b0b0e', // Rich Red
+          800: '#a30d10', // Deep Brand Red
+          700: '#C21014', // Exact UPAVET Red
+          600: '#d9181d', // Bright Tone
+          500: '#ea2a2f', // Accent
           100: '#fee2e2', // Soft Red Tint
           50: '#fef2f2',  // Light Red Base
-          orange: '#ea580c', // SAMU Rescue Accent Orange
-          amber: '#f59e0b'  // SAMU Alert Yellow/Gold
+          red: '#C21014', // Primary UPAVET Red
+          amber: '#f59e0b'
         },
         cream: {
           50: '#fcfdfd',

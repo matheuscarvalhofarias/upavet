@@ -1,10 +1,9 @@
-/* UPAVET Styles - Paleta Resgate SAMU (Vermelho, Laranja e Branco Clínico) */
+/* UPAVET Styles - Cor Oficial #C21014 */
 
 :root {
-  --primary-deep: #7f1d1d;
-  --primary-rich: #dc2626;
-  --primary-accent: #ea580c;
-  --brand-orange: #ea580c;
+  --primary-deep: #8b0b0e;
+  --primary-rich: #C21014;
+  --primary-accent: #C21014;
   --gold-warm: #f59e0b;
   --cream-base: #f8fafc;
   --cream-soft: #f1f5f9;
@@ -42,7 +41,7 @@ body {
 }
 
 .glass-card-dark {
-  background: rgba(185, 28, 28, 0.96);
+  background: #C21014;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
@@ -80,13 +79,13 @@ body {
 
 .nav-dropdown-item:hover {
   background-color: #f8fafc !important;
-  border-color: #dc2626 !important;
+  border-color: #C21014 !important;
   transform: translateX(3px) !important;
 }
 
-/* Custom Gradients - SAMU Style */
+/* Custom Gradients - UPAVET #C21014 */
 .gradient-red {
-  background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 50%, #ea580c 100%);
+  background: linear-gradient(135deg, #8b0b0e 0%, #C21014 50%, #d9181d 100%);
 }
 
 .gradient-cream {
@@ -94,11 +93,11 @@ body {
 }
 
 .gradient-radial-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.12) 0%, rgba(248, 250, 252, 0) 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(194, 16, 20, 0.1) 0%, rgba(248, 250, 252, 0) 70%);
 }
 
 .gradient-subtle-glow {
-  background: radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.1) 0%, rgba(248, 250, 252, 0) 65%);
+  background: radial-gradient(circle at 80% 20%, rgba(194, 16, 20, 0.08) 0%, rgba(248, 250, 252, 0) 65%);
 }
 
 /* Before / After Slider Styling */
@@ -130,7 +129,7 @@ body {
   background: #ffffff;
   cursor: ew-resize;
   transform: translateX(-50%);
-  box-shadow: 0 0 14px rgba(220, 38, 38, 0.45);
+  box-shadow: 0 0 14px rgba(194, 16, 20, 0.45);
   pointer-events: none;
   z-index: 25;
   transition: none;
@@ -151,8 +150,8 @@ body {
   height: 44px;
   border-radius: 50%;
   background: #ffffff;
-  color: #dc2626;
-  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.35);
+  color: #C21014;
+  box-shadow: 0 6px 18px rgba(194, 16, 20, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,11 +212,11 @@ body {
   background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #dc2626;
+  background: #C21014;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b91c1c;
+  background: #a30d10;
 }
 
 /* Modal Transitions */
@@ -255,8 +254,8 @@ body {
 
 /* Custom Checkbox */
 .custom-checkbox:checked {
-  background-color: #dc2626;
-  border-color: #dc2626;
+  background-color: #C21014;
+  border-color: #C21014;
 }
 
 /* Button Shimmer */
@@ -276,7 +275,7 @@ body {
     60deg,
     rgba(255, 255, 255, 0) 20%,
     rgba(255, 255, 255, 0.28) 50%,
-    rgba(255, 255, 255, 0) 80%
+    rgba(255, 255, 255, 0.8)
   );
   transform: rotate(25deg);
   animation: shimmer 4.5s infinite;
