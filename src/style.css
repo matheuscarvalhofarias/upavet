@@ -1,9 +1,9 @@
-/* UPAVET Styles - Cor Oficial #C21014 */
+/* UPAVET Styles - Cor #8B0000 (Dark Red) */
 
 :root {
-  --primary-deep: #8b0b0e;
-  --primary-rich: #C21014;
-  --primary-accent: #C21014;
+  --primary-deep: #4a0000;
+  --primary-rich: #8B0000;
+  --primary-accent: #a30000;
   --gold-warm: #f59e0b;
   --cream-base: #f8fafc;
   --cream-soft: #f1f5f9;
@@ -41,7 +41,7 @@ body {
 }
 
 .glass-card-dark {
-  background: #C21014;
+  background: #8B0000;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
@@ -79,13 +79,13 @@ body {
 
 .nav-dropdown-item:hover {
   background-color: #f8fafc !important;
-  border-color: #C21014 !important;
+  border-color: #8B0000 !important;
   transform: translateX(3px) !important;
 }
 
-/* Custom Gradients - UPAVET #C21014 */
+/* Custom Gradients - UPAVET #8B0000 */
 .gradient-red {
-  background: linear-gradient(135deg, #8b0b0e 0%, #C21014 50%, #d9181d 100%);
+  background: linear-gradient(135deg, #4a0000 0%, #8B0000 50%, #a30000 100%);
 }
 
 .gradient-cream {
@@ -93,11 +93,11 @@ body {
 }
 
 .gradient-radial-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(194, 16, 20, 0.1) 0%, rgba(248, 250, 252, 0) 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(139, 0, 0, 0.09) 0%, rgba(248, 250, 252, 0) 70%);
 }
 
 .gradient-subtle-glow {
-  background: radial-gradient(circle at 80% 20%, rgba(194, 16, 20, 0.08) 0%, rgba(248, 250, 252, 0) 65%);
+  background: radial-gradient(circle at 80% 20%, rgba(139, 0, 0, 0.07) 0%, rgba(248, 250, 252, 0) 65%);
 }
 
 /* Before / After Slider Styling */
@@ -129,7 +129,7 @@ body {
   background: #ffffff;
   cursor: ew-resize;
   transform: translateX(-50%);
-  box-shadow: 0 0 14px rgba(194, 16, 20, 0.45);
+  box-shadow: 0 0 14px rgba(139, 0, 0, 0.45);
   pointer-events: none;
   z-index: 25;
   transition: none;
@@ -150,8 +150,8 @@ body {
   height: 44px;
   border-radius: 50%;
   background: #ffffff;
-  color: #C21014;
-  box-shadow: 0 6px 18px rgba(194, 16, 20, 0.35);
+  color: #8B0000;
+  box-shadow: 0 6px 18px rgba(139, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,11 +212,11 @@ body {
   background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C21014;
+  background: #8B0000;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a30d10;
+  background: #680000;
 }
 
 /* Modal Transitions */
@@ -254,8 +254,8 @@ body {
 
 /* Custom Checkbox */
 .custom-checkbox:checked {
-  background-color: #C21014;
-  border-color: #C21014;
+  background-color: #8B0000;
+  border-color: #8B0000;
 }
 
 /* Button Shimmer */

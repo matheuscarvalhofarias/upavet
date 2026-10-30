@@ -8,16 +8,16 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          950: '#380405', // Deep Dark Red
-          900: '#5a0609', // Dark Crimson
-          850: '#8b0b0e', // Rich Red
-          800: '#a30d10', // Deep Brand Red
-          700: '#C21014', // Exact UPAVET Red
-          600: '#d9181d', // Bright Tone
-          500: '#ea2a2f', // Accent
+          950: '#2b0000', // Deep Dark Wine
+          900: '#4a0000', // Deep Crimson Dark
+          850: '#680000', // Dark Maroon
+          800: '#750000', // Darker Red
+          700: '#8B0000', // Exact DarkRed (#8B0000)
+          600: '#a30000', // Hover DarkRed
+          500: '#b80000', // Bright Accent
           100: '#fee2e2', // Soft Red Tint
           50: '#fef2f2',  // Light Red Base
-          red: '#C21014', // Primary UPAVET Red
+          red: '#8B0000', // Primary UPAVET Red
           amber: '#f59e0b'
         },
         cream: {
