@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = process.env.PORT || 3334;
+const PORT = process.env.PORT || 3335;
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
   '.css': 'text/css; charset=UTF-8',
@@ -51,5 +51,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`✨ Arca Forte Landing Page está rodando em http://localhost:${PORT}`);
+  console.log(`🚑 UPAVET Landing Page rodando em http://localhost:${PORT}`);
 });

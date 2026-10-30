@@ -1,17 +1,17 @@
-/* Arca Forte Styles */
+/* UPAVET Styles - Paleta Resgate SAMU (Vermelho, Laranja e Branco Clínico) */
 
 :root {
-  --primary-deep: #074883;
-  --primary-rich: #075da9;
-  --primary-accent: #0b75c9;
-  --brand-brown: #6f3f13;
-  --gold-warm: #d97706;
-  --cream-base: #fff9e9;
-  --cream-soft: #fff1c9;
-  --cream-warm: #f8e2a9;
-  --ink: #12253b;
-  --muted: #5f6f7e;
-  --line: #e9dfc8;
+  --primary-deep: #7f1d1d;
+  --primary-rich: #dc2626;
+  --primary-accent: #ea580c;
+  --brand-orange: #ea580c;
+  --gold-warm: #f59e0b;
+  --cream-base: #f8fafc;
+  --cream-soft: #f1f5f9;
+  --cream-warm: #fee2e2;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
 }
 
 body {
@@ -32,26 +32,26 @@ body {
 
 /* Glassmorphism Classes */
 .glass-card {
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(7, 93, 169, 0.1);
-  box-shadow: 0 20px 45px -15px rgba(18, 37, 59, 0.1), 0 0 1px 1px rgba(7, 93, 169, 0.05);
+  border: 1px solid rgba(220, 38, 38, 0.12);
+  box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.08), 0 0 1px 1px rgba(220, 38, 38, 0.05);
 }
 
 .glass-card-dark {
-  background: rgba(7, 93, 169, 0.92);
+  background: rgba(185, 28, 28, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 20px 45px -15px rgba(7, 93, 169, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 45px -15px rgba(185, 28, 28, 0.4);
 }
 
 .glass-nav {
-  background: rgba(255, 249, 233, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(7, 93, 169, 0.12);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.14);
   z-index: 1000 !important;
 }
 
@@ -66,38 +66,38 @@ body {
 .nav-dropdown-menu {
   background-color: #ffffff !important;
   background: #ffffff !important;
-  border: 1px solid rgba(7, 93, 169, 0.18) !important;
-  box-shadow: 0 25px 50px -12px rgba(7, 72, 131, 0.25), 0 0 0 1px rgba(7, 93, 169, 0.08) !important;
+  border: 1px solid rgba(220, 38, 38, 0.18) !important;
+  box-shadow: 0 25px 50px -12px rgba(127, 29, 29, 0.22), 0 0 0 1px rgba(220, 38, 38, 0.08) !important;
   opacity: 1 !important;
 }
 
 .nav-dropdown-item {
-  background-color: #fffdf7 !important;
-  border: 1px solid #e9dfc8 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #f1f5f9 !important;
   transition: all 0.2s ease !important;
 }
 
 .nav-dropdown-item:hover {
-  background-color: #eff6ff !important;
-  border-color: #075da9 !important;
+  background-color: #fef2f2 !important;
+  border-color: #dc2626 !important;
   transform: translateX(3px) !important;
 }
 
-/* Custom Gradients */
-.gradient-blue {
-  background: linear-gradient(135deg, #074883 0%, #075da9 50%, #0b75c9 100%);
+/* Custom Gradients - SAMU Style */
+.gradient-red {
+  background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 50%, #ea580c 100%);
 }
 
 .gradient-cream {
-  background: linear-gradient(135deg, #fff9e9 0%, #fff1c9 50%, #f8e2a9 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #fee2e2 100%);
 }
 
 .gradient-radial-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(11, 117, 201, 0.14) 0%, rgba(255, 249, 233, 0) 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.12) 0%, rgba(248, 250, 252, 0) 70%);
 }
 
 .gradient-subtle-glow {
-  background: radial-gradient(circle at 80% 20%, rgba(7, 93, 169, 0.12) 0%, rgba(255, 249, 233, 0) 65%);
+  background: radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.1) 0%, rgba(248, 250, 252, 0) 65%);
 }
 
 /* Before / After Slider Styling */
@@ -129,7 +129,7 @@ body {
   background: #ffffff;
   cursor: ew-resize;
   transform: translateX(-50%);
-  box-shadow: 0 0 14px rgba(7, 93, 169, 0.4);
+  box-shadow: 0 0 14px rgba(220, 38, 38, 0.45);
   pointer-events: none;
   z-index: 25;
   transition: none;
@@ -150,8 +150,8 @@ body {
   height: 44px;
   border-radius: 50%;
   background: #ffffff;
-  color: #075da9;
-  box-shadow: 0 6px 18px rgba(7, 93, 169, 0.3);
+  color: #dc2626;
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,7 +187,7 @@ body {
     transform: scale(1);
   }
   50% {
-    opacity: 0.75;
+    opacity: 0.8;
     transform: scale(1.05);
   }
 }
@@ -209,14 +209,14 @@ body {
   width: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #fff9e9;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #075da9;
+  background: #dc2626;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0b75c9;
+  background: #b91c1c;
 }
 
 /* Modal Transitions */
@@ -254,8 +254,8 @@ body {
 
 /* Custom Checkbox */
 .custom-checkbox:checked {
-  background-color: #075da9;
-  border-color: #075da9;
+  background-color: #dc2626;
+  border-color: #dc2626;
 }
 
 /* Button Shimmer */
@@ -305,4 +305,3 @@ svg {
 .w-5 { width: 1.25rem; height: 1.25rem; }
 .w-4 { width: 1rem; height: 1rem; }
 .w-3\.5 { width: 0.875rem; height: 0.875rem; }
-

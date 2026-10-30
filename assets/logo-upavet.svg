@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="samuRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="50%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="samuOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#7f1d1d" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Shield Badge -->
+  <circle cx="256" cy="256" r="236" fill="url(#samuRed)" filter="url(#shadow)"/>
+  <circle cx="256" cy="256" r="222" fill="none" stroke="#ffffff" stroke-width="8" stroke-dasharray="16 10" opacity="0.85"/>
+  <circle cx="256" cy="256" r="200" fill="#ffffff"/>
+  
+  <!-- Inner Ring Background -->
+  <circle cx="256" cy="256" r="185" fill="#fef2f2"/>
+  
+  <!-- Star of Life / Medical Cross Shape -->
+  <g fill="url(#samuRed)">
+    <!-- Vertical Bar -->
+    <rect x="216" y="96" width="80" height="320" rx="20"/>
+    <!-- Horizontal Bar -->
+    <rect x="96" y="216" width="320" height="80" rx="20"/>
+    
+    <!-- Accent Orange Emergency Center -->
+    <circle cx="256" cy="256" r="64" fill="url(#samuOrange)"/>
+  </g>
+  
+  <!-- White Pet Paw Print in Center (Veterinary Symbol) -->
+  <g fill="#ffffff">
+    <!-- Main Paw Pad -->
+    <path d="M256 244c-22 0-38 18-38 36 0 16 16 28 38 28s38-12 38-28c0-18-16-36-38-36z"/>
+    <!-- 4 Toe Pads -->
+    <circle cx="228" cy="232" r="11"/>
+    <circle cx="284" cy="232" r="11"/>
+    <circle cx="244" cy="216" r="11"/>
+    <circle cx="268" cy="216" r="11"/>
+  </g>
+  
+  <!-- Emergency 24H Badge -->
+  <rect x="186" y="400" width="140" height="42" rx="21" fill="url(#samuRed)"/>
+  <text x="256" y="428" font-family="'Nunito', 'Segoe UI', sans-serif" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle" letter-spacing="2">24 HORAS</text>
+</svg>
