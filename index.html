@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://upavet.com.br/">
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/upavet2.webp" type="image/webp">
+  <link rel="icon" href="assets/upavet.jpg">
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
     "@type":"VeterinaryCare",
     "name":"UPAVET Pronto Atendimento Veterinário 24 Horas",
     "url":"https://upavet.com.br/",
-    "logo":"assets/upavet2.webp",
+    "logo":"assets/upavet.jpg",
     "image":"assets/atendimento.png",
     "description":"Clínica veterinária e pet shop em Águas Lindas de Goiás com atendimento para cães e gatos, consultas, vacinas, exames, cirurgias, centro cirúrgico, internação, banho e tosa premium e pet shop.",
     "telephone":"+55-61-3613-2601",
@@ -113,21 +113,30 @@
   <!-- NAVIGATION -->
   <header id="nav-header" class="sticky top-0 z-[60] glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-24">
+      <div class="flex items-center justify-between min-h-[5.25rem] sm:min-h-[5.75rem] py-2">
 
         <!-- Logo -->
-        <a href="#inicio" class="flex items-center gap-3.5 group py-1">
-          <img src="assets/upavet2.webp" alt="Logotipo UPAVET"
-            width="90" height="72" loading="eager" decoding="async"
-            class="logo-header-img group-hover:scale-105 transition-transform">
-          <div class="flex flex-col justify-center">
-            <span class="logo-header-title">
+        <a href="#inicio" class="upavet-logo-link group py-1" aria-label="UPAVET Clínica Veterinária - Ir para o início">
+
+          <!-- Símbolo -->
+          <img src="assets/upavet.jpg" alt="Logotipo UPAVET" width="100" height="100" loading="eager" decoding="async"
+            class="upavet-logo-img group-hover:scale-105">
+
+          <!-- Textos -->
+          <div class="upavet-logo-text">
+
+            <!-- Nome principal -->
+            <span class="upavet-logo-title">
               UPAVET
             </span>
-            <span class="logo-header-subtitle">
+
+            <!-- Subtítulo -->
+            <span class="upavet-logo-subtitle">
               Clínica Veterinária
             </span>
+
           </div>
+
         </a>
 
         <!-- Desktop Menu -->
@@ -152,7 +161,14 @@
                   class="nav-dropdown-item flex items-center gap-3 p-2.5 rounded-xl text-[#12253B] hover:text-[#8B0000] group/item">
                   <div
                     class="w-8 h-8 rounded-lg bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center shrink-0 group-hover/item:bg-[#8B0000] group-hover/item:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="w-4 h-4 shrink-0" aria-hidden="true">
+                      <rect width="7" height="7" x="3" y="3" rx="1" />
+                      <rect width="7" height="7" x="14" y="3" rx="1" />
+                      <rect width="7" height="7" x="14" y="14" rx="1" />
+                      <rect width="7" height="7" x="3" y="14" rx="1" />
+                    </svg>
                   </div>
                   <div>
                     <span class="block text-xs font-black">Todos os Serviços</span>
@@ -165,7 +181,15 @@
                   class="nav-dropdown-item flex items-center gap-3 p-2.5 rounded-xl text-[#12253B] hover:text-[#8B0000] group/item">
                   <div
                     class="w-8 h-8 rounded-lg bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center shrink-0 group-hover/item:bg-[#8B0000] group-hover/item:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="w-4 h-4 shrink-0" aria-hidden="true">
+                      <path d="M11 2v2" />
+                      <path d="M5 2v2" />
+                      <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
+                      <path d="M8 15a6 6 0 0 0 12 0v-3" />
+                      <circle cx="20" cy="10" r="2" />
+                    </svg>
                   </div>
                   <div>
                     <span class="block text-xs font-black">Consulta & Prevenção</span>
@@ -177,7 +201,15 @@
                   class="nav-dropdown-item flex items-center gap-3 p-2.5 rounded-xl text-[#12253B] hover:text-[#8B0000] group/item">
                   <div
                     class="w-8 h-8 rounded-lg bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center shrink-0 group-hover/item:bg-[#8B0000] group-hover/item:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="w-4 h-4 shrink-0" aria-hidden="true">
+                      <circle cx="6" cy="6" r="3" />
+                      <path d="M8.12 8.12 12 12" />
+                      <path d="M20 4 8.12 15.88" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M14.8 14.8 20 20" />
+                    </svg>
                   </div>
                   <div>
                     <span class="block text-xs font-black">Banho & Tosa Especializado</span>
@@ -189,7 +221,12 @@
                   class="nav-dropdown-item flex items-center gap-3 p-2.5 rounded-xl text-[#12253B] hover:text-[#8B0000] group/item">
                   <div
                     class="w-8 h-8 rounded-lg bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center shrink-0 group-hover/item:bg-[#8B0000] group-hover/item:text-white transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.48 12H2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="w-4 h-4 shrink-0" aria-hidden="true">
+                      <path
+                        d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.48 12H2" />
+                    </svg>
                   </div>
                   <div>
                     <span class="block text-xs font-black">Estrutura & Cirurgias</span>
@@ -206,7 +243,7 @@
 
         <!-- CTA Button -->
         <div class="hidden sm:flex items-center gap-3">
-          <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Arca%20Forte."
+          <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20UPAVET."
             target="_blank"
             class="btn-shimmer bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-sm px-6 py-3 rounded-full shadow-lg shadow-[#8B0000]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-2">
             <i data-lucide="calendar-check" class="w-4 h-4 text-amber-300"></i>
@@ -239,22 +276,50 @@
           <div class="pl-2 space-y-1.5 border-l-2 border-[#8B0000]/20 ml-3">
             <a href="#servicos"
               class="nav-dropdown-item flex items-center gap-2.5 py-2.5 px-3 rounded-xl text-sm font-bold text-[#12253B]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#8B0000] shrink-0" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-4 h-4 text-[#8B0000] shrink-0" aria-hidden="true">
+                <rect width="7" height="7" x="3" y="3" rx="1" />
+                <rect width="7" height="7" x="14" y="3" rx="1" />
+                <rect width="7" height="7" x="14" y="14" rx="1" />
+                <rect width="7" height="7" x="3" y="14" rx="1" />
+              </svg>
               <span>Todos os Serviços</span>
             </a>
             <a href="#consulta"
               class="nav-dropdown-item flex items-center gap-2.5 py-2.5 px-3 rounded-xl text-sm font-bold text-[#12253B]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#8B0000] shrink-0" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-4 h-4 text-[#8B0000] shrink-0" aria-hidden="true">
+                <path d="M11 2v2" />
+                <path d="M5 2v2" />
+                <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
+                <path d="M8 15a6 6 0 0 0 12 0v-3" />
+                <circle cx="20" cy="10" r="2" />
+              </svg>
               <span>Consulta & Prevenção</span>
             </a>
             <a href="#transformacao"
               class="nav-dropdown-item flex items-center gap-2.5 py-2.5 px-3 rounded-xl text-sm font-bold text-[#12253B]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#8B0000] shrink-0" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-4 h-4 text-[#8B0000] shrink-0" aria-hidden="true">
+                <circle cx="6" cy="6" r="3" />
+                <path d="M8.12 8.12 12 12" />
+                <path d="M20 4 8.12 15.88" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M14.8 14.8 20 20" />
+              </svg>
               <span>Banho & Tosa Especializado</span>
             </a>
             <a href="#estrutura"
               class="nav-dropdown-item flex items-center gap-2.5 py-2.5 px-3 rounded-xl text-sm font-bold text-[#12253B]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[#8B0000] shrink-0" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.48 12H2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-4 h-4 text-[#8B0000] shrink-0" aria-hidden="true">
+                <path
+                  d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.48 12H2" />
+              </svg>
               <span>Estrutura & Cirurgias</span>
             </a>
           </div>
@@ -268,7 +333,7 @@
           Frequentes</a>
       </nav>
       <div class="pt-4 border-t border-[#e4e4e7] flex flex-col gap-3">
-        <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Arca%20Forte."
+        <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20UPAVET."
           target="_blank"
           class="w-full bg-[#8B0000] text-white font-bold py-3.5 rounded-xl shadow flex items-center justify-center gap-2 text-sm">
           <i data-lucide="message-circle" class="w-4 h-4 text-amber-300"></i>
@@ -366,8 +431,7 @@
           <div class="relative mx-auto max-w-md lg:max-w-none">
             <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
               <img src="assets/atendimento.webp"
-                alt="Atendimento veterinário UPAVET para cães e gatos em Águas Lindas de Goiás"
-                width="540" height="460"
+                alt="Atendimento veterinário UPAVET para cães e gatos em Águas Lindas de Goiás" width="540" height="460"
                 loading="eager" fetchpriority="high" decoding="async"
                 class="w-full h-[460px] object-cover hover:scale-105 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-[#520000]/80 via-transparent to-transparent"></div>
@@ -415,7 +479,12 @@
           class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 border border-[#8B0000]/15 hover:border-[#8B0000]/40 hover:shadow-xl group">
           <div
             class="w-14 h-14 rounded-2xl bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#8B0000] group-hover:text-white transition-all shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 shrink-0" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.48 12H2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-7 h-7 shrink-0" aria-hidden="true">
+              <path
+                d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.48 12H2" />
+            </svg>
           </div>
           <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Centro Cirúrgico</h3>
           <p class="text-sm text-[#5f6f7e] leading-relaxed">
@@ -424,7 +493,12 @@
           </p>
           <div class="mt-4 pt-4 border-t border-[#e4e4e7] flex items-center gap-1.5 text-xs font-bold text-[#8B0000]">
             <span>Segurança Cirúrgica</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+              class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </div>
         </div>
 
@@ -433,7 +507,13 @@
           class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 border border-[#8B0000]/15 hover:border-[#8B0000]/40 hover:shadow-xl group">
           <div
             class="w-14 h-14 rounded-2xl bg-[#ea580c]/10 text-[#ea580c] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#ea580c] group-hover:text-white transition-all shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 shrink-0" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-7 h-7 shrink-0" aria-hidden="true">
+              <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+              <path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
+            </svg>
           </div>
           <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Internação</h3>
           <p class="text-sm text-[#5f6f7e] leading-relaxed">
@@ -442,7 +522,12 @@
           </p>
           <div class="mt-4 pt-4 border-t border-[#e4e4e7] flex items-center gap-1.5 text-xs font-bold text-[#ea580c]">
             <span>Recuperação Monitorada</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+              class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </div>
         </div>
 
@@ -451,7 +536,13 @@
           class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 border border-[#8B0000]/15 hover:border-[#8B0000]/40 hover:shadow-xl group">
           <div
             class="w-14 h-14 rounded-2xl bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#8B0000] group-hover:text-white transition-all shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 shrink-0" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-7 h-7 shrink-0" aria-hidden="true">
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
           </div>
           <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Prevenção & Vacinas</h3>
           <p class="text-sm text-[#5f6f7e] leading-relaxed">
@@ -460,7 +551,12 @@
           </p>
           <div class="mt-4 pt-4 border-t border-[#e4e4e7] flex items-center gap-1.5 text-xs font-bold text-[#8B0000]">
             <span>Imunização Completa</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+              class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </div>
         </div>
 
@@ -469,7 +565,16 @@
           class="glass-card rounded-3xl p-8 hover:-translate-y-1.5 transition-all duration-300 border border-[#8B0000]/15 hover:border-[#8B0000]/40 hover:shadow-xl group">
           <div
             class="w-14 h-14 rounded-2xl bg-[#ea580c]/10 text-[#ea580c] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#ea580c] group-hover:text-white transition-all shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7 shrink-0" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="w-7 h-7 shrink-0" aria-hidden="true">
+              <path
+                d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+              <path d="M20 3v4" />
+              <path d="M22 5h-4" />
+              <path d="M4 17v2" />
+              <path d="M5 18H3" />
+            </svg>
           </div>
           <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Banho & Tosa Premiado</h3>
           <p class="text-sm text-[#5f6f7e] leading-relaxed">
@@ -478,7 +583,12 @@
           </p>
           <div class="mt-4 pt-4 border-t border-[#e4e4e7] flex items-center gap-1.5 text-xs font-bold text-[#ea580c]">
             <span>Padrão Internacional</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+              class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
           </div>
         </div>
 
@@ -515,16 +625,14 @@
             <!-- CAMADA DEPOIS (Fundo: Cachorro Limpo e Tosado) -->
             <div class="absolute inset-0 w-full h-full">
               <img id="grooming-ba-after" src="./Gemini_Generated_Image_3opnr3opnr3opnr3.webp"
-                alt="Pet após tosa artística e hidratação na UPAVET"
-                width="900" height="480" loading="lazy" decoding="async"
-                class="w-full h-full object-cover">
+                alt="Pet após tosa artística e hidratação na UPAVET" width="900" height="480" loading="lazy"
+                decoding="async" class="w-full h-full object-cover">
             </div>
 
             <!-- CAMADA ANTES (Topo: Cachorro Sujo, recortado pelo slider) -->
             <div id="ba-before-layer" class="ba-before-layer">
               <img id="grooming-ba-before" src="./Gemini_Generated_Image_3v2ln03v2ln03v2l.webp"
-                alt="Pet antes dos cuidados de tosa e banho"
-                width="900" height="480" loading="lazy" decoding="async"
+                alt="Pet antes dos cuidados de tosa e banho" width="900" height="480" loading="lazy" decoding="async"
                 class="w-full h-full object-cover">
             </div>
 
@@ -601,7 +709,15 @@
           <div>
             <div
               class="w-12 h-12 rounded-2xl bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center mb-5 font-bold text-xl group-hover:scale-110 group-hover:bg-[#8B0000] group-hover:text-white transition-all shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 shrink-0" aria-hidden="true">
+                <path d="M11 2v2" />
+                <path d="M5 2v2" />
+                <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" />
+                <path d="M8 15a6 6 0 0 0 12 0v-3" />
+                <circle cx="20" cy="10" r="2" />
+              </svg>
             </div>
             <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Consultas Veterinárias</h3>
             <p class="text-xs text-[#5f6f7e] leading-relaxed">
@@ -611,9 +727,15 @@
           <div class="mt-6 pt-4 border-t border-[#e4e4e7] flex items-center justify-between">
             <span class="text-[11px] font-bold text-[#8B0000]">Cães & Gatos</span>
             <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20agendar%20uma%20consulta%20veterin%C3%A1ria%20para%20meu%20pet."
-              target="_blank" class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
+              target="_blank"
+              class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
               <span>Agendar</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -624,7 +746,16 @@
           <div>
             <div
               class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-5 font-bold text-xl group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0" aria-hidden="true"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-.4.4-1 .6-1.6.6H3v-4.1c0-.6.2-1.2.6-1.6L13.9 4"/><path d="m18 9-5-5"/><path d="m5 19-3 3"/><path d="m14 8-9 9"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 shrink-0" aria-hidden="true">
+                <path d="m18 2 4 4" />
+                <path d="m17 7 3-3" />
+                <path d="M19 9 8.7 19.3c-.4.4-1 .6-1.6.6H3v-4.1c0-.6.2-1.2.6-1.6L13.9 4" />
+                <path d="m18 9-5-5" />
+                <path d="m5 19-3 3" />
+                <path d="m14 8-9 9" />
+              </svg>
             </div>
             <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Vacinas</h3>
             <p class="text-xs text-[#5f6f7e] leading-relaxed">
@@ -634,9 +765,15 @@
           <div class="mt-6 pt-4 border-t border-[#e4e4e7] flex items-center justify-between">
             <span class="text-[11px] font-bold text-amber-700">Imunização V8/V10</span>
             <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20consultar%20sobre%20vacina%C3%A7%C3%A3o%20para%20meu%20pet."
-              target="_blank" class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
+              target="_blank"
+              class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
               <span>Agendar</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -647,7 +784,16 @@
           <div>
             <div
               class="w-12 h-12 rounded-2xl bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center mb-5 font-bold text-xl group-hover:scale-110 group-hover:bg-[#8B0000] group-hover:text-white transition-all shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 shrink-0" aria-hidden="true">
+                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <path d="M12 11h4" />
+                <path d="M12 16h4" />
+                <path d="M8 11h.01" />
+                <path d="M8 16h.01" />
+              </svg>
             </div>
             <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Exames</h3>
             <p class="text-xs text-[#5f6f7e] leading-relaxed">
@@ -657,9 +803,15 @@
           <div class="mt-6 pt-4 border-t border-[#e4e4e7] flex items-center justify-between">
             <span class="text-[11px] font-bold text-[#8B0000]">Laboratório & Apoio</span>
             <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20exames%20veterin%C3%A1rios."
-              target="_blank" class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
+              target="_blank"
+              class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
               <span>Consultar</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -670,7 +822,13 @@
           <div>
             <div
               class="w-12 h-12 rounded-2xl bg-[#ea580c]/10 text-[#ea580c] flex items-center justify-center mb-5 font-bold text-xl group-hover:scale-110 group-hover:bg-[#ea580c] group-hover:text-white transition-all shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 shrink-0" aria-hidden="true">
+                <path
+                  d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                <path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
+              </svg>
             </div>
             <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Cirurgias</h3>
             <p class="text-xs text-[#5f6f7e] leading-relaxed">
@@ -680,9 +838,15 @@
           <div class="mt-6 pt-4 border-t border-[#e4e4e7] flex items-center justify-between">
             <span class="text-[11px] font-bold text-[#ea580c]">Centro Cirúrgico</span>
             <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20cirurgias%20veterin%C3%A1rias."
-              target="_blank" class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
+              target="_blank"
+              class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
               <span>Saber mais</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -693,7 +857,14 @@
           <div>
             <div
               class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-5 font-bold text-xl group-hover:scale-110 group-hover:bg-emerald-700 group-hover:text-white transition-all shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 shrink-0" aria-hidden="true">
+                <path d="M2 4v16" />
+                <path d="M2 8h18a2 2 0 0 1 2 2v10" />
+                <path d="M2 17h20" />
+                <path d="M6 8v9" />
+              </svg>
             </div>
             <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Internação</h3>
             <p class="text-xs text-[#5f6f7e] leading-relaxed">
@@ -703,9 +874,15 @@
           <div class="mt-6 pt-4 border-t border-[#e4e4e7] flex items-center justify-between">
             <span class="text-[11px] font-bold text-emerald-800">Acompanhamento</span>
             <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20interna%C3%A7%C3%A3o%20veterin%C3%A1ria."
-              target="_blank" class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
+              target="_blank"
+              class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
               <span>Falar com equipe</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -716,7 +893,15 @@
           <div>
             <div
               class="w-12 h-12 rounded-2xl bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center mb-5 font-bold text-xl group-hover:scale-110 group-hover:bg-[#8B0000] group-hover:text-white transition-all shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 shrink-0" aria-hidden="true">
+                <circle cx="6" cy="6" r="3" />
+                <path d="M8.12 8.12 12 12" />
+                <path d="M20 4 8.12 15.88" />
+                <circle cx="6" cy="18" r="3" />
+                <path d="M14.8 14.8 20 20" />
+              </svg>
             </div>
             <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Banho & Tosa Premium</h3>
             <p class="text-xs text-[#5f6f7e] leading-relaxed">
@@ -726,9 +911,15 @@
           <div class="mt-6 pt-4 border-t border-[#e4e4e7] flex items-center justify-between">
             <span class="text-[11px] font-bold text-[#8B0000]">Grooming Especializado</span>
             <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20agendar%20banho%20ou%20tosa%20para%20meu%20pet."
-              target="_blank" class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
+              target="_blank"
+              class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
               <span>Agendar</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -739,7 +930,14 @@
           <div>
             <div
               class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-5 font-bold text-xl group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 shrink-0" aria-hidden="true">
+                <path d="M16 10a4 4 0 0 1-8 0" />
+                <path d="M3.103 6.034h17.794" />
+                <path
+                  d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" />
+              </svg>
             </div>
             <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Pet Shop</h3>
             <p class="text-xs text-[#5f6f7e] leading-relaxed">
@@ -748,10 +946,16 @@
           </div>
           <div class="mt-6 pt-4 border-t border-[#e4e4e7] flex items-center justify-between">
             <span class="text-[11px] font-bold text-amber-700">Acessórios & Cuidados</span>
-            <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20saber%20sobre%20produtos%20do%20Pet%20Shop%20Arca%20Forte."
-              target="_blank" class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
+            <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20saber%20sobre%20produtos%20do%20Pet%20Shop%20UPAVET."
+              target="_blank"
+              class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
               <span>Ver produtos</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -762,7 +966,12 @@
           <div>
             <div
               class="w-12 h-12 rounded-2xl bg-[#ea580c]/10 text-[#ea580c] flex items-center justify-center mb-5 font-bold text-xl group-hover:scale-110 group-hover:bg-[#ea580c] group-hover:text-white transition-all shadow-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 shrink-0" aria-hidden="true"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-6 h-6 shrink-0" aria-hidden="true">
+                <path
+                  d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" />
+              </svg>
             </div>
             <h3 class="text-xl font-black font-display text-[#12253B] mb-2">Rações</h3>
             <p class="text-xs text-[#5f6f7e] leading-relaxed">
@@ -771,10 +980,16 @@
           </div>
           <div class="mt-6 pt-4 border-t border-[#e4e4e7] flex items-center justify-between">
             <span class="text-[11px] font-bold text-[#ea580c]">Nutrição Selecionada</span>
-            <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20saber%20sobre%20ra%C3%A7%C3%B5es%20dispon%C3%ADveis%20na%20Arca%20Forte."
-              target="_blank" class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
+            <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20saber%20sobre%20ra%C3%A7%C3%B5es%20dispon%C3%ADveis%20na%20UPAVET."
+              target="_blank"
+              class="text-xs font-bold text-[#8B0000] hover:text-[#a30000] flex items-center gap-1.5 transition-colors">
               <span>Consultar</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 shrink-0" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                class="w-3.5 h-3.5 shrink-0" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -792,15 +1007,13 @@
         <!-- Image Stack -->
         <div class="lg:col-span-6 relative">
           <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-            <img src="assets/vet.webp" alt="Atendimento preventivo e cuidado veterinário na UPAVET"
-              width="600" height="580" loading="lazy" decoding="async"
-              class="w-full h-[580px] object-cover">
+            <img src="assets/vet.webp" alt="Atendimento preventivo e cuidado veterinário na UPAVET" width="600"
+              height="580" loading="lazy" decoding="async" class="w-full h-[580px] object-cover">
           </div>
           <div
             class="absolute -bottom-8 -right-6 z-20 w-66 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white hidden sm:block">
-            <img src="assets/vacinacao.webp" alt="Vacinação de pet na UPAVET"
-              width="264" height="176" loading="lazy" decoding="async"
-              class="w-full h-44 object-cover">
+            <img src="assets/vacinacao.webp" alt="Vacinação de pet na UPAVET" width="264" height="176" loading="lazy"
+              decoding="async" class="w-full h-44 object-cover">
           </div>
         </div>
 
@@ -865,7 +1078,7 @@
           </ul>
 
           <div class="pt-4">
-            <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20estrutura%20e%20os%20servi%C3%A7os%20da%20Arca%20Forte."
+            <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20estrutura%20e%20os%20servi%C3%A7os%20da%20UPAVET."
               target="_blank"
               class="btn-shimmer inline-flex items-center gap-2 bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-sm px-8 py-4 rounded-full shadow-lg shadow-[#8B0000]/20 transition-all hover:scale-105">
               <i data-lucide="message-circle" class="w-4 h-4 text-amber-300"></i>
@@ -950,7 +1163,7 @@
           </div>
 
           <div class="pt-4 flex flex-wrap items-center gap-4">
-            <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20preventiva%20para%20o%20meu%20pet%20na%20Arca%20Forte."
+            <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20preventiva%20para%20o%20meu%20pet%20na%20UPAVET."
               target="_blank"
               class="btn-shimmer inline-flex items-center gap-2.5 bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-full shadow-lg shadow-[#8B0000]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all">
               <i data-lucide="calendar" class="w-4 h-4 text-amber-300"></i>
@@ -967,8 +1180,7 @@
         <div class="lg:col-span-5 relative">
           <div
             class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white group hover:shadow-3xl transition-all duration-300">
-            <img src="assets/consulta.webp"
-              alt="Quando foi a última consulta do seu pet? - UPAVET Clínica Veterinária"
+            <img src="assets/consulta.webp" alt="Quando foi a última consulta do seu pet? - UPAVET Clínica Veterinária"
               width="600" height="580" loading="lazy" decoding="async"
               class="w-full h-auto max-h-[580px] object-contain sm:object-cover mx-auto">
           </div>
@@ -1434,7 +1646,7 @@
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Arca%20Forte%20e%20quero%20agendar%20um%20atendimento."
+        <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20UPAVET%20e%20quero%20agendar%20um%20atendimento."
           target="_blank"
           class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-base px-9 py-4 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-2">
           <i data-lucide="message-circle" class="w-5 h-5"></i>
@@ -1458,15 +1670,16 @@
 
         <!-- Brand column -->
         <div class="space-y-4">
-          <div class="flex items-center gap-3.5">
-            <img src="assets/upavet2.webp" alt="Logotipo UPAVET"
-              width="80" height="64" loading="lazy" decoding="async"
-              class="logo-footer-img">
-            <div class="flex flex-col justify-center">
-              <span class="logo-footer-title">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-white rounded-xl p-1 flex items-center justify-center shrink-0 shadow-md">
+              <img src="assets/upavet.jpg" alt="Logotipo UPAVET" width="48" height="48" loading="lazy" decoding="async"
+                class="w-full h-full object-contain">
+            </div>
+            <div>
+              <span class="text-xl font-black text-white block leading-none font-roboto tracking-tight">
                 UPAVET
               </span>
-              <span class="logo-footer-subtitle">
+              <span class="block text-[10px] tracking-widest uppercase font-semibold text-white/80 mt-1 font-roboto">
                 Clínica Veterinária
               </span>
             </div>
@@ -1566,7 +1779,7 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20agendar%20um%20atendimento%20na%20Arca%20Forte."
+  <a href="https://wa.me/556136132601?text=Ol%C3%A1!%20Quero%20agendar%20um%20atendimento%20na%20UPAVET."
     target="_blank"
     class="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center group"
     aria-label="Falar com a UPAVET pelo WhatsApp">
