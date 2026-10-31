@@ -302,24 +302,42 @@ body {
 .upavet-logo-link {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
   text-decoration: none;
   flex-shrink: 0;
 }
 
+@keyframes logo-gentle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(139, 0, 0, 0));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 0.25));
+  }
+}
+
 .upavet-logo-img {
-  height: 2.25rem; /* 36px mobile */
+  height: 2.5rem; /* ~40px mobile */
   width: auto;
-  max-height: 38px;
+  max-height: 42px;
   object-fit: contain;
   display: block;
+  animation: logo-gentle-pulse 2.8s ease-in-out infinite;
   transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.upavet-logo-link:hover .upavet-logo-img {
+  transform: scale(1.08);
+  animation-play-state: paused;
 }
 
 @media (min-width: 640px) {
   .upavet-logo-img {
-    height: 2.65rem; /* 42px desktop */
-    max-height: 44px;
+    height: 3.1rem; /* ~49px desktop - harmonioso com título + subtítulo */
+    max-height: 50px;
   }
 }
 
@@ -332,7 +350,7 @@ body {
 .upavet-logo-title {
   display: block;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 1.6rem !important; /* 26px mobile */
+  font-size: 1.65rem !important; /* ~26.5px mobile */
   font-weight: 900 !important;
   color: #8B0000 !important;
   line-height: 1 !important;
@@ -343,14 +361,14 @@ body {
 
 @media (min-width: 640px) {
   .upavet-logo-title {
-    font-size: 1.95rem !important; /* 31px desktop */
+    font-size: 2rem !important; /* 32px desktop */
   }
 }
 
 .upavet-logo-subtitle {
   display: block;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 0.72rem !important;
+  font-size: 13.5px !important; /* +2px */
   font-weight: 600 !important;
   text-transform: none !important;
   color: #5f6f7e !important;
@@ -362,7 +380,7 @@ body {
 
 @media (min-width: 640px) {
   .upavet-logo-subtitle {
-    font-size: 0.78rem !important;
+    font-size: 14.5px !important; /* +2px */
     letter-spacing: 0.01em !important;
   }
 }
