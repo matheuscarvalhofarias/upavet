@@ -366,21 +366,22 @@ body {
 .upavet-logo-subtitle {
   display: block;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 13.5px !important;
-  font-weight: 400 !important;
+  font-size: 12.5px !important; /* -1px */
+  font-weight: 400 !important; /* normal weight, sem bold */
   text-transform: none !important;
   color: #5f6f7e !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: normal !important;
   line-height: 1.2 !important;
   margin-top: 1px !important;
   white-space: nowrap !important;
+  -webkit-font-smoothing: antialiased;
 }
 
 @media (min-width: 640px) {
   .upavet-logo-subtitle {
-    font-size: 14.5px !important;
+    font-size: 13.5px !important; /* -1px */
     font-weight: 400 !important;
-    letter-spacing: 0.01em !important;
+    letter-spacing: normal !important;
   }
 }
 
