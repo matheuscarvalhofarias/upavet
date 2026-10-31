@@ -198,18 +198,62 @@ body {
   pointer-events: none;
 }
 
-.ba-sparkle:nth-child(1) { top: 18%; right: 26%; width: 30px; height: 30px; animation-delay: 0s; }
-.ba-sparkle:nth-child(2) { top: 32%; right: 14%; width: 22px; height: 22px; animation-delay: 0.5s; }
-.ba-sparkle:nth-child(3) { top: 15%; right: 44%; width: 24px; height: 24px; animation-delay: 1.0s; }
-.ba-sparkle:nth-child(4) { top: 48%; right: 20%; width: 28px; height: 28px; animation-delay: 1.5s; }
-.ba-sparkle:nth-child(5) { top: 38%; right: 38%; width: 20px; height: 20px; animation-delay: 0.3s; }
-.ba-sparkle:nth-child(6) { top: 62%; right: 30%; width: 26px; height: 26px; animation-delay: 1.8s; }
+.ba-sparkle:nth-child(1) {
+  top: 18%;
+  right: 26%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+}
+
+.ba-sparkle:nth-child(2) {
+  top: 32%;
+  right: 14%;
+  width: 22px;
+  height: 22px;
+  animation-delay: 0.5s;
+}
+
+.ba-sparkle:nth-child(3) {
+  top: 15%;
+  right: 44%;
+  width: 24px;
+  height: 24px;
+  animation-delay: 1.0s;
+}
+
+.ba-sparkle:nth-child(4) {
+  top: 48%;
+  right: 20%;
+  width: 28px;
+  height: 28px;
+  animation-delay: 1.5s;
+}
+
+.ba-sparkle:nth-child(5) {
+  top: 38%;
+  right: 38%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0.3s;
+}
+
+.ba-sparkle:nth-child(6) {
+  top: 62%;
+  right: 30%;
+  width: 26px;
+  height: 26px;
+  animation-delay: 1.8s;
+}
 
 @keyframes ba-sparkle-dance {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(0.35) rotate(0deg);
     opacity: 0.15;
   }
+
   50% {
     transform: scale(1.3) rotate(25deg);
     opacity: 1;
@@ -354,7 +398,8 @@ body {
 .upavet-logo-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Aproximado suavemente da logo sem exagero */
+  gap: 0.5rem;
+  /* Aproximado suavemente da logo sem exagero */
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -418,7 +463,7 @@ body {
 
 @media (min-width: 640px) {
   .upavet-logo-title {
-    font-size: 2.15rem !important;
+    font-size: 1.90rem !important;
     /* ~34px desktop */
   }
 }

@@ -659,7 +659,7 @@ function finishAndRedirectWhatsApp() {
 Olá equipe UPAVET! Vim pelo site e gostaria de confirmar a disponibilidade para o atendimento!`;
 
   const encodedMsg = encodeURIComponent(msg);
-  const whatsappUrl = `https://wa.me/556136132601?text=${encodedMsg}`;
+  const whatsappUrl = `https://wa.me/5561999233249?text=${encodedMsg}`;
 
   // Show Success Step
   const content = document.getElementById('modal-success-screen');
