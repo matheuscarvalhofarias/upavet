@@ -176,19 +176,25 @@ body {
 
 /* Custom Animations */
 @keyframes floatSlow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translateY(-8px) rotate(1deg);
   }
 }
 
 @keyframes pulseSubtle {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.8;
     transform: scale(1.05);
@@ -211,13 +217,16 @@ body {
 ::-webkit-scrollbar {
   width: 9px;
 }
+
 ::-webkit-scrollbar-track {
   background: #fafafa;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #8B0000;
   border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #a30000;
 }
@@ -274,12 +283,10 @@ body {
   left: -60%;
   width: 40%;
   height: 200%;
-  background: linear-gradient(
-    60deg,
-    rgba(255, 255, 255, 0) 20%,
-    rgba(255, 255, 255, 0.28) 50%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: linear-gradient(60deg,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0.28) 50%,
+      rgba(255, 255, 255, 0) 80%);
   transform: rotate(25deg);
   animation: shimmer 4.5s infinite;
 }
@@ -288,9 +295,11 @@ body {
   0% {
     left: -60%;
   }
+
   25% {
     left: 140%;
   }
+
   100% {
     left: 140%;
   }
@@ -308,16 +317,20 @@ body {
 }
 
 @keyframes logo-gentle-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
 }
 
 .upavet-logo-img {
-  height: 2.5rem; /* ~40px mobile */
+  height: 2.5rem;
+  /* ~40px mobile */
   width: auto;
   max-height: 42px;
   object-fit: contain;
@@ -334,7 +347,8 @@ body {
 
 @media (min-width: 640px) {
   .upavet-logo-img {
-    height: 3.1rem; /* ~49px desktop - harmonioso com título + subtítulo */
+    height: 3.1rem;
+    /* ~49px desktop - harmonioso com título + subtítulo */
     max-height: 50px;
   }
 }
@@ -348,7 +362,8 @@ body {
 .upavet-logo-title {
   display: block;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 1.65rem !important; /* ~26.5px mobile */
+  font-size: 1.65rem !important;
+  /* ~26.5px mobile */
   font-weight: 900 !important;
   color: #8B0000 !important;
   line-height: 1 !important;
@@ -359,15 +374,18 @@ body {
 
 @media (min-width: 640px) {
   .upavet-logo-title {
-    font-size: 2rem !important; /* 32px desktop */
+    font-size: 1.6rem !important;
+    /* 32px desktop */
   }
 }
 
 .upavet-logo-subtitle {
   display: block;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 12.5px !important; /* -1px */
-  font-weight: 400 !important; /* normal weight, sem bold */
+  font-size: 11.5px !important;
+  /* -1px */
+  font-weight: 400 !important;
+  /* normal weight, sem bold */
   text-transform: none !important;
   color: #5f6f7e !important;
   letter-spacing: normal !important;
@@ -379,7 +397,8 @@ body {
 
 @media (min-width: 640px) {
   .upavet-logo-subtitle {
-    font-size: 13.5px !important; /* -1px */
+    font-size: 11.5px !important;
+    /* -1px */
     font-weight: 400 !important;
     letter-spacing: normal !important;
   }
@@ -392,8 +411,27 @@ svg {
   flex-shrink: 0;
 }
 
-.w-7 { width: 1.75rem; height: 1.75rem; }
-.w-6 { width: 1.5rem; height: 1.5rem; }
-.w-5 { width: 1.25rem; height: 1.25rem; }
-.w-4 { width: 1rem; height: 1rem; }
-.w-3\.5 { width: 0.875rem; height: 0.875rem; }
+.w-7 {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.w-4 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.w-3\.5 {
+  width: 0.875rem;
+  height: 0.875rem;
+}
