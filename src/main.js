@@ -1,4 +1,4 @@
-﻿// AuraPet - Modern Senior-Crafted Client Architecture
+// UPAVET - Modern Senior-Crafted Client Architecture
 // Zero errors, high-responsiveness, elegant micro-interactions
 
 function initIcons() {

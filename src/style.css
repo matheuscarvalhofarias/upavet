@@ -331,10 +331,10 @@ body {
 }
 
 .upavet-logo-img {
-  height: 2.5rem;
-  /* ~40px mobile */
+  height: 3.15rem;
+  /* ~50px mobile */
   width: auto;
-  max-height: 42px;
+  max-height: 52px;
   object-fit: contain;
   display: block;
   animation: logo-gentle-pulse 2.8s ease-in-out infinite;
@@ -349,9 +349,9 @@ body {
 
 @media (min-width: 640px) {
   .upavet-logo-img {
-    height: 3.1rem;
-    /* ~49px desktop - harmonioso com título + subtítulo */
-    max-height: 50px;
+    height: 3.75rem;
+    /* ~60px desktop - imponente, nítida e com alta presença */
+    max-height: 62px;
   }
 }
 
@@ -365,8 +365,8 @@ body {
 .upavet-logo-title {
   display: block;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 1.65rem !important;
-  /* ~26.5px mobile */
+  font-size: 1.85rem !important;
+  /* ~30px mobile */
   font-weight: 900 !important;
   color: #8B0000 !important;
   line-height: 1 !important;
@@ -377,32 +377,29 @@ body {
 
 @media (min-width: 640px) {
   .upavet-logo-title {
-    font-size: 1.6rem !important;
-    /* 32px desktop */
+    font-size: 2.15rem !important;
+    /* ~34px desktop */
   }
 }
 
 .upavet-logo-subtitle {
   display: block;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 11.5px !important;
-  /* -1px */
-  font-weight: 400 !important;
-  /* normal weight, sem bold */
+  font-size: 12px !important;
+  font-weight: 500 !important;
   text-transform: none !important;
   color: #5f6f7e !important;
   letter-spacing: normal !important;
   line-height: 1.2 !important;
-  margin-top: 1px !important;
+  margin-top: 2px !important;
   white-space: nowrap !important;
   -webkit-font-smoothing: antialiased;
 }
 
 @media (min-width: 640px) {
   .upavet-logo-subtitle {
-    font-size: 11.5px !important;
-    /* -1px */
-    font-weight: 400 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
     letter-spacing: normal !important;
   }
 }
