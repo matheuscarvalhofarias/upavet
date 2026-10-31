@@ -191,6 +191,9 @@ function initBeforeAfterSlider() {
   const handle = document.getElementById('grooming-ba-handle');
   const labelBefore = document.getElementById('ba-label-before');
   const labelAfter = document.getElementById('ba-label-after');
+  const badgeBefore = document.getElementById('ba-badge-before');
+  const badgeAfter = document.getElementById('ba-badge-after');
+  const sparklesLayer = document.getElementById('ba-sparkles-layer');
 
   if (!container || !beforeLayer || !handle) return;
 
@@ -202,6 +205,33 @@ function initBeforeAfterSlider() {
     const clamped = Math.max(0, Math.min(100, percent));
     beforeLayer.style.clipPath = `polygon(0 0, ${clamped}% 0, ${clamped}% 100%, 0 100%)`;
     handle.style.left = `${clamped}%`;
+
+    // Brilhinhos cintilantes quando passar para o DEPOIS (arrastando para a esquerda)
+    if (sparklesLayer) {
+      if (clamped < 65) {
+        sparklesLayer.classList.add('active');
+        const intensity = Math.min(1, Math.max(0.2, (70 - clamped) / 35));
+        sparklesLayer.style.opacity = intensity;
+      } else {
+        sparklesLayer.classList.remove('active');
+        sparklesLayer.style.opacity = '0';
+      }
+    }
+
+    // Destaque nos badges ANTES e DEPOIS
+    if (badgeBefore && badgeAfter) {
+      if (clamped >= 50) {
+        badgeBefore.style.opacity = '1';
+        badgeBefore.style.transform = 'scale(1.05)';
+        badgeAfter.style.opacity = '0.75';
+        badgeAfter.style.transform = 'scale(0.95)';
+      } else {
+        badgeBefore.style.opacity = '0.75';
+        badgeBefore.style.transform = 'scale(0.95)';
+        badgeAfter.style.opacity = '1';
+        badgeAfter.style.transform = 'scale(1.08)';
+      }
+    }
 
     // Aparece ANTES quando a foto for antes (>= 50%); se arrastar para o depois (< 50%), ANTES desaparece e aparece somente DEPOIS
     if (labelBefore && labelAfter) {
