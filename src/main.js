@@ -605,13 +605,13 @@ function openBookingModalWithData(calcData) {
 
 function finishAndRedirectWhatsApp() {
   const code = 'UPAVET-' + Math.floor(1000 + Math.random() * 9000);
-  
+
   // Format WhatsApp message
   const parts = bookingState.date.split('-');
   const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : bookingState.date;
 
-  const msg = 
-`🐾 *NOVO AGENDAMENTO - UPAVET CLÍNICA VETERINÁRIA* 🐾
+  const msg =
+    `🐾 *NOVO AGENDAMENTO - UPAVET CLÍNICA VETERINÁRIA* 🐾
 *Protocolo:* #${code}
 
 👤 *Tutor(a):* ${bookingState.tutorName}
@@ -668,7 +668,7 @@ function initNewsletterForm() {
 
       showToast('Cupom Ativado! 🎉', 'Código BEMVINDO15 copiado! 15% OFF no primeiro banho.', 'gift');
       emailInput.value = '';
-      navigator.clipboard?.writeText('BEMVINDO15').catch(() => {});
+      navigator.clipboard?.writeText('BEMVINDO15').catch(() => { });
     });
   }
 }

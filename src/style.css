@@ -38,8 +38,8 @@ body {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(139, 0, 0, 0.12);
-  box-shadow: 0 20px 45px -15px rgba(24, 24, 27, 0.07), 0 0 1px 1px rgba(139, 0, 0, 0.05);
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 }
 
 .glass-card-dark {
@@ -71,8 +71,8 @@ body {
 .nav-dropdown-menu {
   background-color: #ffffff !important;
   background: #ffffff !important;
-  border: 1px solid rgba(139, 0, 0, 0.18) !important;
-  box-shadow: 0 25px 50px -12px rgba(82, 0, 0, 0.22), 0 0 0 1px rgba(139, 0, 0, 0.08) !important;
+  border: 1px solid #e4e4e7 !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04) !important;
   opacity: 1 !important;
 }
 
@@ -134,7 +134,7 @@ body {
   background: #ffffff;
   cursor: ew-resize;
   transform: translateX(-50%);
-  box-shadow: 0 0 14px rgba(139, 0, 0, 0.45);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
   pointer-events: none;
   z-index: 25;
   transition: none;
@@ -156,7 +156,7 @@ body {
   border-radius: 50%;
   background: #ffffff;
   color: #8B0000;
-  box-shadow: 0 6px 18px rgba(139, 0, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
