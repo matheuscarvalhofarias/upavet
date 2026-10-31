@@ -420,18 +420,20 @@ function initFaqAccordion() {
 }
 
 /* ==========================================================================
-   7. VIP BOOKING MODAL (3-STEP WIZARD)
+   7. BOOKING MODAL WIZARD (3-STEP WITH CUSTOMIZED WHATSAPP COPY)
    ========================================================================== */
+
 let modalCurrentStep = 1;
+
 const bookingState = {
   petName: '',
-  petType: 'Cão Mini/Pequeno',
+  petType: 'Cão',
   petBreed: '',
-  petBehavior: 'Dócil e brincalhão',
+  petBehavior: 'Dócil e tranquilo',
   date: '',
   period: 'Manhã (08h às 12h)',
-  services: ['Banho Hidratante com Ozonioterapia'],
-  estimatedTotal: 'R$ 85',
+  services: ['Consultas Veterinárias'],
+  estimatedTotal: '',
   tutorName: '',
   tutorPhone: '',
   notes: ''
@@ -451,7 +453,20 @@ function initBookingModal() {
       const presetService = btn.getAttribute('data-service');
       if (presetService) {
         bookingState.services = [presetService];
+        const serviceSelect = document.getElementById('modal-service-select');
+        if (serviceSelect) {
+          serviceSelect.value = presetService;
+        }
       }
+
+      // Reset to wizard step 1 and clear any previous success screen
+      const wizard = document.getElementById('modal-wizard-container');
+      const success = document.getElementById('modal-success-screen');
+      if (wizard && success) {
+        wizard.classList.remove('hidden');
+        success.classList.add('hidden');
+      }
+
       openModal();
     });
   });
@@ -468,44 +483,51 @@ function initBookingModal() {
     }
   });
 
-  // Step transitions
-  const stepNext1 = document.getElementById('modal-step-next-1');
-  const stepBack2 = document.getElementById('modal-step-back-2');
-  const stepNext2 = document.getElementById('modal-step-next-2');
-  const stepBack3 = document.getElementById('modal-step-back-3');
-  const formSubmit = document.getElementById('booking-form');
-
+  // Step 1 -> Step 2
+  const stepNext1 = document.getElementById('modal-btn-step-1-next');
   if (stepNext1) {
     stepNext1.addEventListener('click', () => {
       const petNameInput = document.getElementById('modal-pet-name');
-      if (!petNameInput.value.trim()) {
-        showToast('Campo Obrigatório', 'Por favor, informe o nome do seu pet.', 'alert-circle');
-        petNameInput.focus();
+      if (!petNameInput || !petNameInput.value.trim()) {
+        showToast('Nome do Pet', 'Por favor, informe o nome do seu pet para personalizarmos o atendimento.', 'alert-circle');
+        petNameInput?.focus();
         return;
       }
       bookingState.petName = petNameInput.value.trim();
-      bookingState.petBreed = document.getElementById('modal-pet-breed')?.value || 'Não informada';
+      bookingState.petBreed = document.getElementById('modal-pet-breed')?.value.trim() || 'Não informada';
       bookingState.petType = document.getElementById('modal-pet-type-select')?.value || 'Cão';
-      bookingState.petBehavior = document.querySelector('input[name="modal-pet-temperament"]:checked')?.value || 'Calmo';
+      bookingState.petBehavior = document.getElementById('modal-pet-behavior')?.value || 'Dócil e tranquilo';
 
       goToStep(2);
     });
   }
 
+  // Step 2 -> Step 1
+  const stepBack2 = document.getElementById('modal-btn-step-2-back');
   if (stepBack2) {
     stepBack2.addEventListener('click', () => goToStep(1));
   }
 
+  // Step 2 -> Step 3
+  const stepNext2 = document.getElementById('modal-btn-step-2-next');
   if (stepNext2) {
     stepNext2.addEventListener('click', () => {
       const dateInput = document.getElementById('modal-booking-date');
-      if (!dateInput.value) {
-        showToast('Data Desejada', 'Por favor, escolha uma data preferencial.', 'calendar');
-        dateInput.focus();
+      if (!dateInput || !dateInput.value) {
+        showToast('Data Desejada', 'Por favor, escolha uma data de preferência.', 'calendar');
+        dateInput?.focus();
         return;
       }
       bookingState.date = dateInput.value;
-      bookingState.period = document.getElementById('modal-booking-period')?.value || 'Manhã';
+      bookingState.period = document.getElementById('modal-booking-period')?.value || 'Manhã (08h às 12h)';
+
+      const serviceSelect = document.getElementById('modal-service-select');
+      if (serviceSelect && serviceSelect.value) {
+        bookingState.services = [serviceSelect.value];
+      }
+
+      const notesInput = document.getElementById('modal-notes');
+      bookingState.notes = notesInput?.value.trim() || 'Nenhuma observação informada';
 
       // Update review items in step 3
       updateStep3Summary();
@@ -513,26 +535,34 @@ function initBookingModal() {
     });
   }
 
+  // Step 3 -> Step 2
+  const stepBack3 = document.getElementById('modal-btn-step-3-back');
   if (stepBack3) {
     stepBack3.addEventListener('click', () => goToStep(2));
   }
 
-  if (formSubmit) {
-    formSubmit.addEventListener('submit', (e) => {
+  // Step 3 Finish
+  const stepFinish3 = document.getElementById('modal-btn-step-3-finish');
+  if (stepFinish3) {
+    stepFinish3.addEventListener('click', (e) => {
       e.preventDefault();
 
       const tutorNameInput = document.getElementById('modal-tutor-name');
       const tutorPhoneInput = document.getElementById('modal-tutor-phone');
-      const tutorNotesInput = document.getElementById('modal-tutor-notes');
 
-      if (!tutorNameInput.value.trim() || !tutorPhoneInput.value.trim()) {
-        showToast('Atenção', 'Informe seu nome e WhatsApp para contato.', 'alert-circle');
+      if (!tutorNameInput || !tutorNameInput.value.trim()) {
+        showToast('Seu Nome', 'Por favor, informe seu nome completo.', 'alert-circle');
+        tutorNameInput?.focus();
+        return;
+      }
+      if (!tutorPhoneInput || !tutorPhoneInput.value.trim()) {
+        showToast('Seu WhatsApp', 'Por favor, informe seu número de WhatsApp para contato.', 'alert-circle');
+        tutorPhoneInput?.focus();
         return;
       }
 
       bookingState.tutorName = tutorNameInput.value.trim();
       bookingState.tutorPhone = tutorPhoneInput.value.trim();
-      bookingState.notes = tutorNotesInput.value.trim() || 'Nenhuma restrição específica';
 
       // Dispatch to WhatsApp
       finishAndRedirectWhatsApp();
@@ -570,8 +600,8 @@ function goToStep(stepNumber) {
   const steps = [1, 2, 3];
 
   steps.forEach(s => {
-    const panel = document.getElementById(`modal-panel-step-${s}`);
-    const indicator = document.getElementById(`step-indicator-${s}`);
+    const panel = document.getElementById('modal-panel-step-' + s);
+    const indicator = document.getElementById('step-indicator-' + s);
 
     if (panel) {
       if (s === stepNumber) {
@@ -583,13 +613,13 @@ function goToStep(stepNumber) {
 
     if (indicator) {
       if (s === stepNumber) {
-        indicator.classList.add('bg-[#075da9]', 'text-white');
-        indicator.classList.remove('bg-stone-200', 'text-stone-600');
+        indicator.classList.add('bg-[#8B0000]', 'text-white');
+        indicator.classList.remove('bg-stone-200', 'text-stone-600', 'bg-[#a30000]');
       } else if (s < stepNumber) {
-        indicator.classList.add('bg-[#0b75c9]', 'text-white');
-        indicator.classList.remove('bg-stone-200', 'text-stone-600');
+        indicator.classList.add('bg-[#a30000]', 'text-white');
+        indicator.classList.remove('bg-stone-200', 'text-stone-600', 'bg-[#8B0000]');
       } else {
-        indicator.classList.remove('bg-[#075da9]', 'bg-[#0b75c9]', 'text-white');
+        indicator.classList.remove('bg-[#8B0000]', 'bg-[#a30000]', 'text-white');
         indicator.classList.add('bg-stone-200', 'text-stone-600');
       }
     }
@@ -606,27 +636,45 @@ function updateStep3Summary() {
   const summaryDate = document.getElementById('modal-summary-date');
 
   if (summaryPet) {
-    summaryPet.textContent = `${bookingState.petName} (${bookingState.petType} - ${bookingState.petBehavior})`;
+    summaryPet.textContent = bookingState.petName + ' (' + bookingState.petType + (bookingState.petBreed && bookingState.petBreed !== 'Não informada' ? ' • ' + bookingState.petBreed : '') + ')';
   }
   if (summaryServices) {
     summaryServices.textContent = bookingState.services.join(', ');
   }
   if (summaryDate) {
-    // Format date YYYY-MM-DD to DD/MM/YYYY
     const parts = bookingState.date.split('-');
-    const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : bookingState.date;
-    summaryDate.textContent = `${formattedDate} • ${bookingState.period}`;
+    const formattedDate = parts.length === 3 ? parts[2] + '/' + parts[1] + '/' + parts[0] : bookingState.date;
+    summaryDate.textContent = formattedDate + ' • ' + bookingState.period;
   }
 }
 
 function openBookingModalWithData(calcData) {
   bookingState.petType = calcData.petLabel;
   bookingState.services = calcData.services;
-  bookingState.estimatedTotal = `R$ ${calcData.price}`;
+  bookingState.estimatedTotal = 'R$ ' + calcData.price;
 
   const petTypeSelect = document.getElementById('modal-pet-type-select');
   if (petTypeSelect) {
     petTypeSelect.value = calcData.petKey.startsWith('dog') ? 'Cão' : 'Gato';
+  }
+
+  // Pre-select in modal
+  const serviceSelect = document.getElementById('modal-service-select');
+  if (serviceSelect && calcData.services && calcData.services.length > 0) {
+    const firstServ = calcData.services[0];
+    for (let opt of serviceSelect.options) {
+      if (opt.value.toLowerCase().includes(firstServ.toLowerCase()) || firstServ.toLowerCase().includes(opt.value.toLowerCase())) {
+        serviceSelect.value = opt.value;
+        break;
+      }
+    }
+  }
+
+  const wizard = document.getElementById('modal-wizard-container');
+  const success = document.getElementById('modal-success-screen');
+  if (wizard && success) {
+    wizard.classList.remove('hidden');
+    success.classList.add('hidden');
   }
 
   openModal();
@@ -634,32 +682,84 @@ function openBookingModalWithData(calcData) {
 }
 
 function finishAndRedirectWhatsApp() {
-  const code = 'UPAVET-' + Math.floor(1000 + Math.random() * 9000);
+  const code = 'VET-' + Math.floor(1000 + Math.random() * 9000);
 
-  // Format WhatsApp message
+  // Format date YYYY-MM-DD to DD/MM/YYYY
   const parts = bookingState.date.split('-');
-  const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : bookingState.date;
+  const formattedDate = parts.length === 3 ? parts[2] + '/' + parts[1] + '/' + parts[0] : bookingState.date;
+
+  const currentService = (bookingState.services[0] || 'Atendimento Geral');
+  const s = currentService.toLowerCase();
+
+  let headerIcon = '🐾';
+  let title = 'SOLICITAÇÃO DE ATENDIMENTO';
+  let intro = 'Olá! Vim pelo site da clínica e gostaria de verificar disponibilidade para o meu pet:';
+  let serviceField = 'Serviço Desejado';
+
+  if (s.includes('consulta')) {
+    headerIcon = '🩺';
+    title = 'AGENDAMENTO DE CONSULTA VETERINÁRIA';
+    intro = 'Olá! Vim pelo site da clínica e gostaria de agendar uma consulta para o meu pet:';
+    serviceField = 'Consulta Clínica';
+  } else if (s.includes('vacina')) {
+    headerIcon = '💉';
+    title = 'AGENDAMENTO DE VACINAÇÃO';
+    intro = 'Olá! Vim pelo site da clínica e gostaria de agendar a vacinação do meu pet:';
+    serviceField = 'Vacinação';
+  } else if (s.includes('exame')) {
+    headerIcon = '🔬';
+    title = 'SOLICITAÇÃO DE EXAMES E DIAGNÓSTICO';
+    intro = 'Olá! Vim pelo site da clínica e gostaria de orientações / agendamento de exames:';
+    serviceField = 'Exames Solicitados';
+  } else if (s.includes('cirurgi')) {
+    headerIcon = '🏥';
+    title = 'AVALIAÇÃO CIRÚRGICA VETERINÁRIA';
+    intro = 'Olá! Vim pelo site da clínica e gostaria de agendar uma avaliação cirúrgica:';
+    serviceField = 'Procedimento Cirúrgico';
+  } else if (s.includes('interna')) {
+    headerIcon = '🏨';
+    title = 'SUPORTE E INTERNAÇÃO MONITORADA';
+    intro = 'Olá! Vim pelo site da clínica e preciso de suporte / informações de internação:';
+    serviceField = 'Internação';
+  } else if (s.includes('banho') || s.includes('tosa')) {
+    headerIcon = '✨';
+    title = 'AGENDAMENTO DE BANHO & TOSA';
+    intro = 'Olá! Vim pelo site da clínica e gostaria de agendar estética animal para o meu pet:';
+    serviceField = 'Estética Animal';
+  } else if (s.includes('pet shop')) {
+    headerIcon = '🛍️';
+    title = 'CONSULTA DE ITENS PET SHOP';
+    intro = 'Olá! Vim pelo site da clínica e gostaria de verificar disponibilidade de produtos:';
+    serviceField = 'Produtos de Interesse';
+  } else if (s.includes('raç') || s.includes('rac')) {
+    headerIcon = '🥣';
+    title = 'CONSULTA DE RAÇÕES E NUTRIÇÃO';
+    intro = 'Olá! Vim pelo site da clínica e gostaria de consultar rações e nutrição premium:';
+    serviceField = 'Nutrição / Rações';
+  }
+
+  const notesText = (bookingState.notes && bookingState.notes !== 'Nenhuma observação informada')
+    ? '\n📝 *Observações/Sintomas:* ' + bookingState.notes
+    : '';
+
+  const priceText = (bookingState.estimatedTotal && bookingState.estimatedTotal !== 'R$ 85')
+    ? '\n💰 *Estimativa do Simulador:* ' + bookingState.estimatedTotal
+    : '';
 
   const msg =
-    `🐾 *NOVO AGENDAMENTO - UPAVET CLÍNICA VETERINÁRIA* 🐾
-*Protocolo:* #${code}
-
-👤 *Tutor(a):* ${bookingState.tutorName}
-📱 *WhatsApp:* ${bookingState.tutorPhone}
-🐶 *Pet:* ${bookingState.petName} (${bookingState.petType}, Raça: ${bookingState.petBreed})
-✨ *Informações:* ${bookingState.petBehavior}
-
-📅 *Data Preferencial:* ${formattedDate} (${bookingState.period})
-📋 *Serviços Selecionados:*
-- ${bookingState.services.join('\n- ')}
-
-📝 *Observações:* ${bookingState.notes}
-💰 *Estimativa:* ${bookingState.estimatedTotal}
-
-Olá equipe UPAVET! Vim pelo site e gostaria de confirmar a disponibilidade para o atendimento!`;
+headerIcon + ' *' + title + '* ' + headerIcon + '\n' +
+'*Protocolo:* #' + code + '\n\n' +
+intro + '\n\n' +
+'👤 *Tutor(a):* ' + bookingState.tutorName + '\n' +
+'📱 *WhatsApp:* ' + bookingState.tutorPhone + '\n' +
+'🐶 *Pet:* ' + bookingState.petName + ' (' + bookingState.petType + (bookingState.petBreed && bookingState.petBreed !== 'Não informada' ? ', Raça: ' + bookingState.petBreed : '') + ')\n' +
+'✨ *Comportamento:* ' + bookingState.petBehavior + '\n\n' +
+'📅 *Data Preferencial:* ' + formattedDate + ' (' + bookingState.period + ')\n' +
+'📋 *' + serviceField + ':* ' + bookingState.services.join(', ') + notesText + priceText + '\n\n' +
+'Aguardo a confirmação da equipe. Muito obrigado(a)!';
 
   const encodedMsg = encodeURIComponent(msg);
-  const whatsappUrl = `https://wa.me/5561999233249?text=${encodedMsg}`;
+  const whatsappUrl = 'https://wa.me/5561999233249?text=' + encodedMsg;
 
   // Show Success Step
   const content = document.getElementById('modal-success-screen');
@@ -667,7 +767,7 @@ Olá equipe UPAVET! Vim pelo site e gostaria de confirmar a disponibilidade para
   const codeEl = document.getElementById('modal-success-code');
   const btnWa = document.getElementById('btn-wa-confirm');
 
-  if (codeEl) codeEl.textContent = `#${code}`;
+  if (codeEl) codeEl.textContent = '#' + code;
   if (btnWa) {
     btnWa.setAttribute('href', whatsappUrl);
     btnWa.setAttribute('target', '_blank');
