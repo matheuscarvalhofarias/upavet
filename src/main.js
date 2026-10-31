@@ -1,4 +1,4 @@
-// AuraPet - Modern Senior-Crafted Client Architecture
+﻿// AuraPet - Modern Senior-Crafted Client Architecture
 // Zero errors, high-responsiveness, elegant micro-interactions
 
 function initIcons() {
@@ -604,14 +604,14 @@ function openBookingModalWithData(calcData) {
 }
 
 function finishAndRedirectWhatsApp() {
-  const code = 'ARCAFORTE-' + Math.floor(1000 + Math.random() * 9000);
+  const code = 'UPAVET-' + Math.floor(1000 + Math.random() * 9000);
   
   // Format WhatsApp message
   const parts = bookingState.date.split('-');
   const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : bookingState.date;
 
   const msg = 
-`🐾 *NOVO AGENDAMENTO - ARCA FORTE CLÍNICA VETERINÁRIA & PET SHOP* 🐾
+`🐾 *NOVO AGENDAMENTO - UPAVET CLÍNICA VETERINÁRIA* 🐾
 *Protocolo:* #${code}
 
 👤 *Tutor(a):* ${bookingState.tutorName}
