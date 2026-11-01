@@ -183,7 +183,7 @@ function initSpaCalculator() {
 }
 
 /* ==========================================================================
-   3. BEFORE / AFTER COMPARISON SLIDER (PILL CENTRAL LIMPO & BRILHO NO CENTRO)
+   3. BEFORE / AFTER COMPARISON SLIDER (SOMENTE CLICAR E ARRASTAR A LINHA)
    ========================================================================== */
 function initBeforeAfterSlider() {
   const container = document.getElementById('grooming-ba-container');
@@ -192,6 +192,12 @@ function initBeforeAfterSlider() {
   const sparklesLayer = document.getElementById('ba-sparkles-layer');
 
   if (!container || !beforeLayer || !handle) return;
+
+  // Impede categoricamente o arrasto nativo da imagem do cachorro
+  container.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.addEventListener('dragstart', (e) => e.preventDefault());
+  });
 
   let isDragging = false;
   let cachedRect = null;
@@ -233,7 +239,10 @@ function initBeforeAfterSlider() {
   }
 
   const startDrag = (e) => {
+    // Evita seleção de texto e arrasto nativo de imagem do navegador
+    if (e.cancelable) e.preventDefault();
     isDragging = true;
+    document.body.style.userSelect = 'none';
     cachedRect = container.getBoundingClientRect();
     const clientX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0].clientX);
     if (clientX !== undefined) updateFromClientX(clientX);
@@ -241,22 +250,29 @@ function initBeforeAfterSlider() {
 
   const onDrag = (e) => {
     if (!isDragging) return;
+    if (e.cancelable) e.preventDefault();
     const clientX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0].clientX);
     if (clientX !== undefined) updateFromClientX(clientX);
   };
 
   const stopDrag = () => {
-    isDragging = false;
-    cachedRect = null;
+    if (isDragging) {
+      isDragging = false;
+      cachedRect = null;
+      document.body.style.userSelect = '';
+    }
   };
 
-  container.addEventListener('mousedown', startDrag);
-  window.addEventListener('mousemove', onDrag);
+  // SOMENTE a linha e o pill central iniciam o arrasto!
+  handle.addEventListener('mousedown', startDrag);
+  handle.addEventListener('touchstart', startDrag, { passive: false });
+
+  window.addEventListener('mousemove', onDrag, { passive: false });
   window.addEventListener('mouseup', stopDrag);
 
-  container.addEventListener('touchstart', startDrag, { passive: true });
-  window.addEventListener('touchmove', onDrag, { passive: true });
+  window.addEventListener('touchmove', onDrag, { passive: false });
   window.addEventListener('touchend', stopDrag);
+  window.addEventListener('touchcancel', stopDrag);
 
   // Inicializa em 50%
   render(50);

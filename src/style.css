@@ -110,7 +110,17 @@ body {
   position: relative;
   overflow: hidden;
   user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
   border-radius: 1.25rem;
+  cursor: default;
+}
+
+.ba-container img {
+  pointer-events: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-user-select: none !important;
 }
 
 .ba-before-layer {
@@ -123,6 +133,7 @@ body {
   transition: none;
   z-index: 10;
   will-change: clip-path;
+  pointer-events: none;
 }
 
 .ba-slider-handle {
@@ -130,11 +141,13 @@ body {
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 2px;
-  background: rgba(255, 255, 255, 0.9);
+  width: 48px; /* Hitbox generoso de 48px centrado na linha vertical */
   cursor: ew-resize;
   transform: translateX(-50%);
-  pointer-events: none;
+  pointer-events: auto; /* A linha e o pill recebem todos os cliques e toques */
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
   z-index: 25;
   transition: none;
   will-change: left;
@@ -142,9 +155,14 @@ body {
 
 .ba-handle-line {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
   background: #ffffff;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9), 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.95), 0 0 20px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
 }
 
 .ba-animating .ba-before-layer,
@@ -159,16 +177,18 @@ body {
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  background: rgba(24, 24, 27, 0.88);
+  background: rgba(24, 24, 27, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
   border-radius: 9999px;
   padding: 4px 6px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 255, 255, 0.2);
   pointer-events: auto;
   cursor: grab;
   white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
   transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
 }
 
