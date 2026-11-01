@@ -183,31 +183,22 @@ function initSpaCalculator() {
 }
 
 /* ==========================================================================
-   3. BEFORE / AFTER COMPARISON SLIDER (REVAMP COM VISÃO RÁPIDA & BRILHO NO CENTRO)
+   3. BEFORE / AFTER COMPARISON SLIDER (PILL CENTRAL LIMPO & BRILHO NO CENTRO)
    ========================================================================== */
 function initBeforeAfterSlider() {
   const container = document.getElementById('grooming-ba-container');
   const beforeLayer = document.getElementById('ba-before-layer');
   const handle = document.getElementById('grooming-ba-handle');
-  const badgeBefore = document.getElementById('ba-badge-before');
-  const badgeAfter = document.getElementById('ba-badge-after');
   const sparklesLayer = document.getElementById('ba-sparkles-layer');
-  const statusHint = document.getElementById('ba-status-hint');
-
-  const btnBefore = document.getElementById('ba-btn-view-before');
-  const btnCompare = document.getElementById('ba-btn-view-compare');
-  const btnAfter = document.getElementById('ba-btn-view-after');
 
   if (!container || !beforeLayer || !handle) return;
 
   let isDragging = false;
   let cachedRect = null;
   let rafId = null;
-  let currentPercent = 50;
 
   function render(percent) {
-    currentPercent = Math.max(0, Math.min(100, percent));
-    const clamped = currentPercent;
+    const clamped = Math.max(0, Math.min(100, percent));
 
     // Recorta camada ANTES à esquerda
     beforeLayer.style.clipPath = `polygon(0 0, ${clamped}% 0, ${clamped}% 100%, 0 100%)`;
@@ -225,82 +216,6 @@ function initBeforeAfterSlider() {
         sparklesLayer.style.opacity = '0';
       }
     }
-
-    // Ênfase dinâmica nos badges de canto
-    if (badgeBefore && badgeAfter) {
-      if (clamped >= 75) {
-        badgeBefore.style.opacity = '1';
-        badgeBefore.style.transform = 'scale(1.05)';
-        badgeAfter.style.opacity = '0.4';
-        badgeAfter.style.transform = 'scale(0.92)';
-      } else if (clamped <= 25) {
-        badgeBefore.style.opacity = '0.4';
-        badgeBefore.style.transform = 'scale(0.92)';
-        badgeAfter.style.opacity = '1';
-        badgeAfter.style.transform = 'scale(1.08)';
-      } else {
-        badgeBefore.style.opacity = '0.9';
-        badgeBefore.style.transform = 'scale(1)';
-        badgeAfter.style.opacity = '0.95';
-        badgeAfter.style.transform = 'scale(1)';
-      }
-    }
-
-    // Atualiza botões de visão e dica inferior
-    [btnBefore, btnCompare, btnAfter].forEach(b => b?.classList.remove('active'));
-    if (clamped >= 80) {
-      btnBefore?.classList.add('active');
-      if (statusHint) statusHint.textContent = 'Mostrando pet na chegada (Antes)';
-    } else if (clamped <= 20) {
-      btnAfter?.classList.add('active');
-      if (statusHint) statusHint.textContent = 'Mostrando resultado pós-banho & tosa (Depois)';
-    } else {
-      btnCompare?.classList.add('active');
-      if (statusHint) statusHint.textContent = 'Arraste a linha central para comparar a transformação';
-    }
-  }
-
-  // Animação fluida e suave ao clicar nos botões rápidos
-  function animateTo(targetPercent, duration = 380) {
-    const startPercent = currentPercent;
-    const startTime = performance.now();
-
-    function step(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(1, elapsed / duration);
-      // Ease out cubic
-      const ease = 1 - Math.pow(1 - progress, 3);
-      const val = startPercent + (targetPercent - startPercent) * ease;
-      render(val);
-
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
-    }
-
-    requestAnimationFrame(step);
-  }
-
-  // Ações dos botões de controle rápido
-  if (btnBefore) {
-    btnBefore.addEventListener('click', (e) => {
-      e.preventDefault();
-      animateTo(98);
-    });
-  }
-
-  if (btnCompare) {
-    btnCompare.addEventListener('click', (e) => {
-      e.preventDefault();
-      animateTo(50);
-    });
-  }
-
-  if (btnAfter) {
-    btnAfter.addEventListener('click', (e) => {
-      e.preventDefault();
-      animateTo(2);
-    });
   }
 
   // Interação ao arrastar com mouse ou toque
@@ -343,7 +258,7 @@ function initBeforeAfterSlider() {
   window.addEventListener('touchmove', onDrag, { passive: true });
   window.addEventListener('touchend', stopDrag);
 
-  // Inicializa em 50% (comparação equilibrada)
+  // Inicializa em 50%
   render(50);
 }
 

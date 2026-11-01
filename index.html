@@ -615,7 +615,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-10">
+      <div class="text-center max-w-3xl mx-auto mb-12">
         <span
           class="text-xs font-black uppercase tracking-widest text-[#8B0000] bg-[#8B0000]/10 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
           <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Estética Animal de Alto Padrão
@@ -624,29 +624,8 @@
           Veja a transformação real de um cuidado profissional
         </h2>
         <p class="text-[#5f6f7e] mt-2 text-base leading-relaxed">
-          De pelagem embolada e sem viço para um pet renovado, radiante e perfumado. Arraste o divisor interativo ou clique nos botões para comparar cada detalhe.
+          De pelagem embolada e sem viço para um pet renovado, radiante e perfumado.
         </p>
-      </div>
-
-      <!-- Quick Interactive View Controls (Botões de visão rápida) -->
-      <div class="flex items-center justify-center gap-2 sm:gap-3 mb-6 select-none flex-wrap">
-        <button id="ba-btn-view-before" type="button"
-          class="ba-view-btn px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-bold transition-all border border-stone-200 bg-white hover:bg-stone-50 text-stone-700 flex items-center gap-2 shadow-xs cursor-pointer active:scale-95">
-          <span class="w-2.5 h-2.5 rounded-full bg-stone-400"></span>
-          <span>1. Ver Só Antes</span>
-        </button>
-
-        <button id="ba-btn-view-compare" type="button"
-          class="ba-view-btn active px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-bold transition-all border border-[#8B0000] bg-[#8B0000] text-white flex items-center gap-2 shadow-md cursor-pointer active:scale-95">
-          <i data-lucide="split" class="w-3.5 h-3.5"></i>
-          <span>2. Comparar Lado a Lado</span>
-        </button>
-
-        <button id="ba-btn-view-after" type="button"
-          class="ba-view-btn px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-bold transition-all border border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-900 flex items-center gap-2 shadow-xs cursor-pointer active:scale-95">
-          <span class="text-amber-500 text-sm">✨</span>
-          <span>3. Ver Resultado Final</span>
-        </button>
       </div>
 
       <!-- Main Slider Card -->
@@ -654,12 +633,12 @@
         <div class="glass-card p-3 sm:p-5 rounded-3xl border border-[#e4e4e7] shadow-2xl bg-white">
 
           <div id="grooming-ba-container"
-            class="ba-container h-[390px] sm:h-[510px] w-full relative cursor-ew-resize select-none overflow-hidden rounded-2xl shadow-inner">
+            class="ba-container h-[400px] sm:h-[530px] w-full relative cursor-ew-resize select-none overflow-hidden rounded-2xl shadow-inner">
 
             <!-- CAMADA DEPOIS (Fundo: Cachorro Limpo e Tosado) -->
             <div class="absolute inset-0 w-full h-full">
               <img id="grooming-ba-after" src="./Gemini_Generated_Image_3opnr3opnr3opnr3.webp"
-                alt="Pet após tosa artística e hidratação na UPAVET" width="900" height="510" loading="lazy"
+                alt="Pet após tosa artística e hidratação na UPAVET" width="900" height="530" loading="lazy"
                 decoding="async" class="w-full h-full object-cover">
             </div>
 
@@ -702,62 +681,35 @@
             <!-- CAMADA ANTES (Topo: Cachorro com pelo embolado, recortado pelo slider à esquerda) -->
             <div id="ba-before-layer" class="ba-before-layer">
               <img id="grooming-ba-before" src="./Gemini_Generated_Image_3v2ln03v2ln03v2l.webp"
-                alt="Pet antes dos cuidados de tosa e banho" width="900" height="510" loading="lazy" decoding="async"
+                alt="Pet antes dos cuidados de tosa e banho" width="900" height="530" loading="lazy" decoding="async"
                 class="w-full h-full object-cover">
             </div>
 
-            <!-- Badge ANTES (Fixado no canto superior esquerdo com status) -->
-            <div id="ba-badge-before"
-              class="absolute top-4 left-4 z-20 pointer-events-none select-none transition-all duration-300">
-              <span
-                class="inline-flex items-center gap-2 bg-stone-950/80 backdrop-blur-md text-white font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-white/20 shadow-xl">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
-                <span>ANTES</span>
-                <span class="hidden sm:inline text-[11px] text-stone-300 font-medium">• Chegada</span>
-              </span>
-            </div>
-
-            <!-- Badge DEPOIS (Fixado no canto superior direito com status dourado) -->
-            <div id="ba-badge-after"
-              class="absolute top-4 right-4 z-20 pointer-events-none select-none transition-all duration-300">
-              <span
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-amber-300/40 shadow-xl shadow-amber-500/20">
-                <svg class="w-3.5 h-3.5 text-amber-200 animate-spin" style="animation-duration: 4s;" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
-                </svg>
-                <span>DEPOIS</span>
-                <span class="hidden sm:inline text-[11px] text-amber-100 font-medium">• Transformação UPAVET</span>
-              </span>
-            </div>
-
-            <!-- Divisor Deslizante com Linha Laser e Botão Central -->
+            <!-- Divisor Deslizante com Pill Central Unificado ANTES / DEPOIS -->
             <div id="grooming-ba-handle" class="ba-slider-handle">
-              <div class="ba-handle-line-glow"></div>
-              <div class="ba-handle-button shadow-2xl">
-                <i data-lucide="chevrons-left-right" class="w-4 h-4 text-[#8B0000]"></i>
-              </div>
-            </div>
-
-            <!-- Pill Dinâmico de Instrução no Rodapé Central -->
-            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none text-center">
-              <div class="inline-flex items-center gap-2 bg-black/65 backdrop-blur-md text-white text-[11px] sm:text-xs font-bold px-4 py-1.5 rounded-full border border-white/20 shadow-lg">
-                <i data-lucide="chevrons-left-right" class="w-3.5 h-3.5 text-amber-400"></i>
-                <span id="ba-status-hint">Arraste a linha central para comparar</span>
+              <div class="ba-handle-line"></div>
+              
+              <div class="ba-handle-pill shadow-2xl">
+                <div class="ba-handle-side ba-handle-left">
+                  <i data-lucide="chevron-left" class="w-3.5 h-3.5 text-stone-300"></i>
+                  <span>ANTES</span>
+                </div>
+                <div class="ba-handle-divider"></div>
+                <div class="ba-handle-side ba-handle-right">
+                  <span>DEPOIS</span>
+                  <span class="text-amber-300 text-xs">✨</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-amber-300"></i>
+                </div>
               </div>
             </div>
 
           </div>
 
-          <!-- Legenda Informativa Inferior -->
-          <div class="mt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-[#5f6f7e] gap-2 px-2">
-            <span class="flex items-center gap-1.5 font-bold text-[#12253B]">
-              <i data-lucide="mouse-pointer" class="w-4 h-4 text-[#8B0000]"></i>
-              Passe o mouse ou toque na foto para mover o comparativo
-            </span>
-            <span class="text-[#8B0000] font-bold text-center sm:text-right">
-              Procedimento: Banho Relaxante + Tosa Artística na Tesoura + Hidratação de Pelagem
-            </span>
-          </div>
+          <!-- Legenda Minimalista Inferior -->
+          <p class="mt-3.5 text-center text-xs text-stone-500 font-medium flex items-center justify-center gap-1.5">
+            <i data-lucide="chevrons-left-right" class="w-3.5 h-3.5 text-[#8B0000]"></i>
+            Arraste o botão central para os lados para comparar a transformação
+          </p>
 
         </div>
 
