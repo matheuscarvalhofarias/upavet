@@ -183,34 +183,42 @@ function initSpaCalculator() {
 }
 
 /* ==========================================================================
-   3. BEFORE / AFTER COMPARISON SLIDER
+   3. BEFORE / AFTER COMPARISON SLIDER (REVAMP COM VISÃO RÁPIDA & BRILHO NO CENTRO)
    ========================================================================== */
 function initBeforeAfterSlider() {
   const container = document.getElementById('grooming-ba-container');
   const beforeLayer = document.getElementById('ba-before-layer');
   const handle = document.getElementById('grooming-ba-handle');
-  const labelBefore = document.getElementById('ba-label-before');
-  const labelAfter = document.getElementById('ba-label-after');
   const badgeBefore = document.getElementById('ba-badge-before');
   const badgeAfter = document.getElementById('ba-badge-after');
   const sparklesLayer = document.getElementById('ba-sparkles-layer');
+  const statusHint = document.getElementById('ba-status-hint');
+
+  const btnBefore = document.getElementById('ba-btn-view-before');
+  const btnCompare = document.getElementById('ba-btn-view-compare');
+  const btnAfter = document.getElementById('ba-btn-view-after');
 
   if (!container || !beforeLayer || !handle) return;
 
   let isDragging = false;
   let cachedRect = null;
   let rafId = null;
+  let currentPercent = 50;
 
   function render(percent) {
-    const clamped = Math.max(0, Math.min(100, percent));
+    currentPercent = Math.max(0, Math.min(100, percent));
+    const clamped = currentPercent;
+
+    // Recorta camada ANTES à esquerda
     beforeLayer.style.clipPath = `polygon(0 0, ${clamped}% 0, ${clamped}% 100%, 0 100%)`;
     handle.style.left = `${clamped}%`;
 
-    // Brilhinhos cintilantes quando passar para o DEPOIS (arrastando para a esquerda)
+    // Recorta camada de BRILHOS estritamente no cão limpo (lado DEPOIS da linha)
     if (sparklesLayer) {
-      if (clamped < 65) {
+      sparklesLayer.style.clipPath = `polygon(${clamped}% 0, 100% 0, 100% 100%, ${clamped}% 100%)`;
+      if (clamped < 85) {
         sparklesLayer.classList.add('active');
-        const intensity = Math.min(1, Math.max(0.2, (70 - clamped) / 35));
+        const intensity = Math.min(1, Math.max(0.35, (90 - clamped) / 50));
         sparklesLayer.style.opacity = intensity;
       } else {
         sparklesLayer.classList.remove('active');
@@ -218,38 +226,84 @@ function initBeforeAfterSlider() {
       }
     }
 
-    // Destaque nos badges ANTES e DEPOIS
+    // Ênfase dinâmica nos badges de canto
     if (badgeBefore && badgeAfter) {
-      if (clamped >= 50) {
+      if (clamped >= 75) {
         badgeBefore.style.opacity = '1';
         badgeBefore.style.transform = 'scale(1.05)';
-        badgeAfter.style.opacity = '0.75';
-        badgeAfter.style.transform = 'scale(0.95)';
-      } else {
-        badgeBefore.style.opacity = '0.75';
-        badgeBefore.style.transform = 'scale(0.95)';
+        badgeAfter.style.opacity = '0.4';
+        badgeAfter.style.transform = 'scale(0.92)';
+      } else if (clamped <= 25) {
+        badgeBefore.style.opacity = '0.4';
+        badgeBefore.style.transform = 'scale(0.92)';
         badgeAfter.style.opacity = '1';
         badgeAfter.style.transform = 'scale(1.08)';
+      } else {
+        badgeBefore.style.opacity = '0.9';
+        badgeBefore.style.transform = 'scale(1)';
+        badgeAfter.style.opacity = '0.95';
+        badgeAfter.style.transform = 'scale(1)';
       }
     }
 
-    // Aparece ANTES quando a foto for antes (>= 50%); se arrastar para o depois (< 50%), ANTES desaparece e aparece somente DEPOIS
-    if (labelBefore && labelAfter) {
-      if (clamped >= 50) {
-        labelBefore.style.opacity = '1';
-        labelBefore.style.transform = 'scale(1)';
-        labelAfter.style.opacity = '0';
-        labelAfter.style.transform = 'scale(0.9)';
-      } else {
-        labelBefore.style.opacity = '0';
-        labelBefore.style.transform = 'scale(0.9)';
-        labelAfter.style.opacity = '1';
-        labelAfter.style.transform = 'scale(1)';
-      }
+    // Atualiza botões de visão e dica inferior
+    [btnBefore, btnCompare, btnAfter].forEach(b => b?.classList.remove('active'));
+    if (clamped >= 80) {
+      btnBefore?.classList.add('active');
+      if (statusHint) statusHint.textContent = 'Mostrando pet na chegada (Antes)';
+    } else if (clamped <= 20) {
+      btnAfter?.classList.add('active');
+      if (statusHint) statusHint.textContent = 'Mostrando resultado pós-banho & tosa (Depois)';
+    } else {
+      btnCompare?.classList.add('active');
+      if (statusHint) statusHint.textContent = 'Arraste a linha central para comparar a transformação';
     }
   }
 
-  // Instant Dragging with zero layout thrashing
+  // Animação fluida e suave ao clicar nos botões rápidos
+  function animateTo(targetPercent, duration = 380) {
+    const startPercent = currentPercent;
+    const startTime = performance.now();
+
+    function step(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(1, elapsed / duration);
+      // Ease out cubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const val = startPercent + (targetPercent - startPercent) * ease;
+      render(val);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  // Ações dos botões de controle rápido
+  if (btnBefore) {
+    btnBefore.addEventListener('click', (e) => {
+      e.preventDefault();
+      animateTo(98);
+    });
+  }
+
+  if (btnCompare) {
+    btnCompare.addEventListener('click', (e) => {
+      e.preventDefault();
+      animateTo(50);
+    });
+  }
+
+  if (btnAfter) {
+    btnAfter.addEventListener('click', (e) => {
+      e.preventDefault();
+      animateTo(2);
+    });
+  }
+
+  // Interação ao arrastar com mouse ou toque
   function updateFromClientX(clientX) {
     if (!cachedRect) cachedRect = container.getBoundingClientRect();
     let offsetX = clientX - cachedRect.left;
@@ -289,7 +343,7 @@ function initBeforeAfterSlider() {
   window.addEventListener('touchmove', onDrag, { passive: true });
   window.addEventListener('touchend', stopDrag);
 
-  // Initialize at 50%
+  // Inicializa em 50% (comparação equilibrada)
   render(50);
 }
 

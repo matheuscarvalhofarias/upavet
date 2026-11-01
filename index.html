@@ -611,160 +611,225 @@
   </section>
 
   <!-- ANTES E DEPOIS - TRANSFORMAÇÃO ESTÉTICA UPAVET -->
-  <section id="transformacao" class="py-24 bg-[#fafafa]">
+  <section id="transformacao" class="py-24 bg-[#fafafa] relative overflow-hidden border-t border-[#e4e4e7]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-10">
         <span
-          class="text-xs font-black uppercase tracking-widest text-[#8B0000] bg-[#8B0000]/10 px-3.5 py-1.5 rounded-full">
-          Estética Pet & Banho e Tosa Especializado
+          class="text-xs font-black uppercase tracking-widest text-[#8B0000] bg-[#8B0000]/10 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Estética Animal de Alto Padrão
         </span>
         <h2 class="text-3xl sm:text-4xl font-black font-display text-[#12253B] mt-3">
-          Banho e tosa com padrão profissional
+          Veja a transformação real de um cuidado profissional
         </h2>
-        <p class="text-[#5f6f7e] mt-2 text-base">
-          Além da saúde clínica, o bem-estar e a pelagem importam. A UPAVET oferece banho e tosa com profissionais
-          altamente qualificados, incluindo experiência e premiações em competições internacionais.
+        <p class="text-[#5f6f7e] mt-2 text-base leading-relaxed">
+          De pelagem embolada e sem viço para um pet renovado, radiante e perfumado. Arraste o divisor interativo ou clique nos botões para comparar cada detalhe.
         </p>
       </div>
 
-      <!-- Slider Container Card -->
+      <!-- Quick Interactive View Controls (Botões de visão rápida) -->
+      <div class="flex items-center justify-center gap-2 sm:gap-3 mb-6 select-none flex-wrap">
+        <button id="ba-btn-view-before" type="button"
+          class="ba-view-btn px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-bold transition-all border border-stone-200 bg-white hover:bg-stone-50 text-stone-700 flex items-center gap-2 shadow-xs cursor-pointer active:scale-95">
+          <span class="w-2.5 h-2.5 rounded-full bg-stone-400"></span>
+          <span>1. Ver Só Antes</span>
+        </button>
+
+        <button id="ba-btn-view-compare" type="button"
+          class="ba-view-btn active px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-bold transition-all border border-[#8B0000] bg-[#8B0000] text-white flex items-center gap-2 shadow-md cursor-pointer active:scale-95">
+          <i data-lucide="split" class="w-3.5 h-3.5"></i>
+          <span>2. Comparar Lado a Lado</span>
+        </button>
+
+        <button id="ba-btn-view-after" type="button"
+          class="ba-view-btn px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-bold transition-all border border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-900 flex items-center gap-2 shadow-xs cursor-pointer active:scale-95">
+          <span class="text-amber-500 text-sm">✨</span>
+          <span>3. Ver Resultado Final</span>
+        </button>
+      </div>
+
+      <!-- Main Slider Card -->
       <div class="max-w-4xl mx-auto">
-        <div class="glass-card p-3 sm:p-5 rounded-3xl border border-[#e4e4e7] shadow-xl">
+        <div class="glass-card p-3 sm:p-5 rounded-3xl border border-[#e4e4e7] shadow-2xl bg-white">
 
           <div id="grooming-ba-container"
-            class="ba-container h-[380px] sm:h-[500px] w-full relative cursor-ew-resize select-none overflow-hidden rounded-2xl shadow-inner">
+            class="ba-container h-[390px] sm:h-[510px] w-full relative cursor-ew-resize select-none overflow-hidden rounded-2xl shadow-inner">
 
             <!-- CAMADA DEPOIS (Fundo: Cachorro Limpo e Tosado) -->
             <div class="absolute inset-0 w-full h-full">
               <img id="grooming-ba-after" src="./Gemini_Generated_Image_3opnr3opnr3opnr3.webp"
-                alt="Pet após tosa artística e hidratação na UPAVET" width="900" height="500" loading="lazy"
+                alt="Pet após tosa artística e hidratação na UPAVET" width="900" height="510" loading="lazy"
                 decoding="async" class="w-full h-full object-cover">
             </div>
 
-            <!-- CAMADA DE BRILHINHOS CINTILANTES (Sparkles ao passar para o DEPOIS) -->
+            <!-- CAMADA DE BRILHINHOS CINTILANTES (Cravados no MEIO do cachorro limpo: cabeça, orelhas, focinho e peitoral) -->
             <div id="ba-sparkles-layer" class="ba-sparkles-layer">
-              <svg class="ba-sparkle" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
-              </svg>
-              <svg class="ba-sparkle" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
-              </svg>
-              <svg class="ba-sparkle" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
-              </svg>
-              <svg class="ba-sparkle" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
-              </svg>
-              <svg class="ba-sparkle" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
-              </svg>
-              <svg class="ba-sparkle" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
-              </svg>
-            </div>
-
-            <!-- CAMADA ANTES (Topo: Cachorro Sujo, recortado pelo slider) -->
-            <div id="ba-before-layer" class="ba-before-layer">
-              <img id="grooming-ba-before" src="./Gemini_Generated_Image_3v2ln03v2ln03v2l.webp"
-                alt="Pet antes dos cuidados de tosa e banho" width="900" height="500" loading="lazy" decoding="async"
-                class="w-full h-full object-cover">
-            </div>
-
-            <!-- Badge ANTES (Forte, elegante e nítido) -->
-            <div id="ba-badge-before"
-              class="absolute top-4 left-4 z-20 pointer-events-none select-none transition-all duration-300">
-              <span
-                class="inline-flex items-center gap-2 bg-black/65 backdrop-blur-md text-white font-black text-xs sm:text-sm px-4 py-2 rounded-full border border-white/20 shadow-2xl tracking-wider">
-                <span class="w-2.5 h-2.5 rounded-full bg-stone-300"></span>
-                <span>ANTES</span>
-              </span>
-            </div>
-
-            <!-- Badge DEPOIS (Destaque dourado cintilante) -->
-            <div id="ba-badge-after"
-              class="absolute top-4 right-4 z-20 pointer-events-none select-none transition-all duration-300">
-              <span
-                class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-black text-xs sm:text-sm px-4 py-2 rounded-full border border-amber-300/40 shadow-2xl shadow-amber-500/30 tracking-wider">
-                <svg class="w-4 h-4 text-amber-200 animate-spin" style="animation-duration: 4s;" viewBox="0 0 24 24"
-                  fill="currentColor">
-                  <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
-                </svg>
-                <span>DEPOIS</span>
-                <span class="hidden sm:inline text-[11px] text-amber-100 font-bold">• RESULTADO</span>
-              </span>
-            </div>
-
-            <!-- Divisor Deslizante com Botão Central -->
-            <div id="grooming-ba-handle" class="ba-slider-handle">
-              <div class="ba-handle-button">
-                <i data-lucide="chevrons-left-right" class="w-5 h-5 text-[#8B0000]"></i>
+              <!-- Brilho 1: Topo da cabeça / coroa -->
+              <div class="ba-sparkle ba-sparkle-1" title="Brilho da pelagem">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" /></svg>
+              </div>
+              <!-- Brilho 2: Orelha / bochecha esquerda -->
+              <div class="ba-sparkle ba-sparkle-2">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" /></svg>
+              </div>
+              <!-- Brilho 3: Orelha / bochecha direita -->
+              <div class="ba-sparkle ba-sparkle-3">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" /></svg>
+              </div>
+              <!-- Brilho 4: Focinho / Centro do rosto (Grande estrela) -->
+              <div class="ba-sparkle ba-sparkle-4">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" /></svg>
+              </div>
+              <!-- Brilho 5: Centro do Peito / Pelo sedoso -->
+              <div class="ba-sparkle ba-sparkle-5">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" /></svg>
+              </div>
+              <!-- Brilho 6: Colarinho esquerdo -->
+              <div class="ba-sparkle ba-sparkle-6">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" /></svg>
+              </div>
+              <!-- Brilho 7: Colarinho direito -->
+              <div class="ba-sparkle ba-sparkle-7">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" /></svg>
+              </div>
+              <!-- Brilho 8: Pelagem inferior -->
+              <div class="ba-sparkle ba-sparkle-8">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" /></svg>
               </div>
             </div>
 
-            <!-- Sutil gradiente na base para contraste e legibilidade perfeita do texto -->
-            <div
-              class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none z-10">
+            <!-- CAMADA ANTES (Topo: Cachorro com pelo embolado, recortado pelo slider à esquerda) -->
+            <div id="ba-before-layer" class="ba-before-layer">
+              <img id="grooming-ba-before" src="./Gemini_Generated_Image_3v2ln03v2ln03v2l.webp"
+                alt="Pet antes dos cuidados de tosa e banho" width="900" height="510" loading="lazy" decoding="async"
+                class="w-full h-full object-cover">
             </div>
 
-            <!-- Texto Antes / Depois dinâmico no meio no bottom -->
-            <div
-              class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none text-center whitespace-nowrap">
-              <div class="relative flex items-center justify-center min-w-[140px] h-7">
-                <span id="ba-label-before"
-                  class="text-xs sm:text-sm font-black uppercase tracking-widest text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] [text-shadow:_0_2px_10px_rgba(0,0,0,0.95)] transition-all duration-200 absolute">
-                  ANTES DA TRANSFORMAÇÃO
-                </span>
-                <span id="ba-label-after"
-                  class="text-xs sm:text-sm font-black uppercase tracking-widest text-amber-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] [text-shadow:_0_2px_10px_rgba(0,0,0,0.95)] transition-all duration-200 absolute opacity-0 scale-90 pointer-events-none flex items-center gap-1.5">
-                  ✨ DEPOIS DO CUIDADO UPAVET
-                </span>
+            <!-- Badge ANTES (Fixado no canto superior esquerdo com status) -->
+            <div id="ba-badge-before"
+              class="absolute top-4 left-4 z-20 pointer-events-none select-none transition-all duration-300">
+              <span
+                class="inline-flex items-center gap-2 bg-stone-950/80 backdrop-blur-md text-white font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-white/20 shadow-xl">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span>ANTES</span>
+                <span class="hidden sm:inline text-[11px] text-stone-300 font-medium">• Chegada</span>
+              </span>
+            </div>
+
+            <!-- Badge DEPOIS (Fixado no canto superior direito com status dourado) -->
+            <div id="ba-badge-after"
+              class="absolute top-4 right-4 z-20 pointer-events-none select-none transition-all duration-300">
+              <span
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-amber-300/40 shadow-xl shadow-amber-500/20">
+                <svg class="w-3.5 h-3.5 text-amber-200 animate-spin" style="animation-duration: 4s;" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0l2.8 8.2L23 11l-8.2 2.8L12 22l-2.8-8.2L1 11l8.2-2.8z" />
+                </svg>
+                <span>DEPOIS</span>
+                <span class="hidden sm:inline text-[11px] text-amber-100 font-medium">• Transformação UPAVET</span>
+              </span>
+            </div>
+
+            <!-- Divisor Deslizante com Linha Laser e Botão Central -->
+            <div id="grooming-ba-handle" class="ba-slider-handle">
+              <div class="ba-handle-line-glow"></div>
+              <div class="ba-handle-button shadow-2xl">
+                <i data-lucide="chevrons-left-right" class="w-4 h-4 text-[#8B0000]"></i>
+              </div>
+            </div>
+
+            <!-- Pill Dinâmico de Instrução no Rodapé Central -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none select-none text-center">
+              <div class="inline-flex items-center gap-2 bg-black/65 backdrop-blur-md text-white text-[11px] sm:text-xs font-bold px-4 py-1.5 rounded-full border border-white/20 shadow-lg">
+                <i data-lucide="chevrons-left-right" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span id="ba-status-hint">Arraste a linha central para comparar</span>
               </div>
             </div>
 
           </div>
 
-          <!-- Legenda e Instruções -->
+          <!-- Legenda Informativa Inferior -->
           <div class="mt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-[#5f6f7e] gap-2 px-2">
             <span class="flex items-center gap-1.5 font-bold text-[#12253B]">
               <i data-lucide="mouse-pointer" class="w-4 h-4 text-[#8B0000]"></i>
-              Arraste o divisor na foto para comparar a transformação
+              Passe o mouse ou toque na foto para mover o comparativo
             </span>
             <span class="text-[#8B0000] font-bold text-center sm:text-right">
               Procedimento: Banho Relaxante + Tosa Artística na Tesoura + Hidratação de Pelagem
             </span>
           </div>
 
-          <!-- Destaques e CTA Banho & Tosa -->
-          <div class="mt-5 pt-4 border-t border-[#e4e4e7] flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-bold text-[#12253B] bg-[#fafafa] px-3 py-1.5 rounded-full border border-[#e4e4e7]">
-                <i data-lucide="scissors" class="w-3.5 h-3.5 text-[#8B0000]"></i> Tosa na Tesoura
-              </span>
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-bold text-[#12253B] bg-[#fafafa] px-3 py-1.5 rounded-full border border-[#e4e4e7]">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i> Hidratação Profunda
-              </span>
-              <span
-                class="inline-flex items-center gap-1.5 text-xs font-bold text-[#12253B] bg-[#fafafa] px-3 py-1.5 rounded-full border border-[#e4e4e7]">
-                <i data-lucide="award" class="w-3.5 h-3.5 text-[#8B0000]"></i> Profissionais Premiados
-              </span>
-            </div>
+        </div>
 
-            <a href="https://wa.me/5561999233249?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20banho%20e%20tosa%20para%20o%20meu%20pet."
-              target="_blank"
-              class="btn-shimmer inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-full shadow-md hover:scale-105 transition-all shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                class="w-4 h-4 text-white shrink-0" aria-hidden="true">
-                <path
-                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-              </svg>
-              <span>Agendar Banho & Tosa</span>
-            </a>
+        <!-- NOVA VISÃO: OS 3 PILARES DA TRANSFORMAÇÃO -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+
+          <div class="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-[#8B0000]/10 text-[#8B0000] flex items-center justify-center font-bold mb-3">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-black text-sm text-[#12253B]">Banho & Hidratação de Pelagem</h4>
+              <p class="text-xs text-stone-500 mt-1.5 leading-relaxed">
+                Desembolo cuidadoso sem dor, shampoo hipoalergênico e máscara reconstrutora que devolve o toque aveludado e o brilho intenso.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex items-center gap-1.5 text-[11px] font-bold text-[#8B0000]">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i> Fios desembaraçados e sem nós
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold mb-3">
+                <i data-lucide="scissors" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-black text-sm text-[#12253B]">Tosa Artística na Tesoura</h4>
+              <p class="text-xs text-stone-500 mt-1.5 leading-relaxed">
+                Escultura detalhada respeitando o formato natural do pet, valorizando o rostinho e as patas com tesouras cirúrgicas de alta precisão.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex items-center gap-1.5 text-[11px] font-bold text-amber-600">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i> Acabamento suave e sem marcas
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-stone-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold mb-3">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-black text-sm text-[#12253B]">Higiene Clínica & Bem-Estar</h4>
+              <p class="text-xs text-stone-500 mt-1.5 leading-relaxed">
+                Tosa higiênica preventiva nas patinhas e região íntima, limpeza auricular suave e corte de unhas para evitar lesões de postura.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600">
+              <i data-lucide="check" class="w-3.5 h-3.5"></i> Toalhas e materiais 100% esterilizados
+            </div>
           </div>
 
         </div>
+
+        <!-- Banner CTA Direto para Agendamento com o Modal -->
+        <div class="mt-6 bg-gradient-to-r from-[#520000] to-[#8B0000] text-white rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+          <div>
+            <span class="text-xs font-black uppercase tracking-widest text-amber-300 flex items-center gap-1.5">
+              <i data-lucide="award" class="w-4 h-4"></i> Equipe com Premiações Internacionais
+            </span>
+            <h3 class="text-xl sm:text-2xl font-black font-display mt-1">Quer ver o seu pet transformado assim?</h3>
+            <p class="text-xs sm:text-sm text-stone-200 mt-1 max-w-xl leading-relaxed">
+              Agende agora o horário de estética. Nosso atendimento é carinhoso, focado no bem-estar e sem estresse para cães e gatos.
+            </p>
+          </div>
+          <button type="button"
+            class="btn-open-booking btn-shimmer bg-amber-400 hover:bg-amber-300 text-[#520000] font-black text-xs sm:text-sm px-7 py-4 rounded-2xl shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2 shrink-0 w-full sm:w-auto"
+            data-service="Banho & Tosa Especializado">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Agendar Banho & Tosa</span>
+          </button>
+        </div>
+
       </div>
 
     </div>
