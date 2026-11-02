@@ -1,3 +1,41 @@
+
+/* ==========================================================================
+   MOBILE INPUT FOCUS & ANTI-ZOOM FIXES
+   Previne o zoom automático nativo do Safari/Chrome ao focar em inputs (<16px)
+   e elimina highlights azuis/cinzas/anéis indesejados ao tocar na tela.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea,
+  .modal-input {
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+  }
+}
+
+input, select, textarea, button {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #8B0000 !important;
+}
+
 /* UPAVET Styles - Paleta Sofisticada DarkRed (#8B0000) */
 
 :root {

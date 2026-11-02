@@ -428,14 +428,14 @@ const bookingState = {
 
 function markInputInvalid(el, message, title = 'Campo Obrigatório') {
   if (!el) return;
-  el.classList.add('border-red-500', 'ring-2', 'ring-red-200');
+  el.classList.add('border-red-500', 'bg-red-50/40');
   el.focus();
   showToast(title, message, 'alert-circle');
 }
 
 function clearInputInvalid(el) {
   if (!el) return;
-  el.classList.remove('border-red-500', 'ring-2', 'ring-red-200');
+  el.classList.remove('border-red-500', 'bg-red-50/40', 'ring-2', 'ring-red-200');
 }
 
 function initBookingModal() {
@@ -626,6 +626,7 @@ function initBookingModal() {
 }
 
 function openModal() {
+  if (window.lucide) window.lucide.createIcons(); // modal refresh
   const modal = document.getElementById('booking-modal');
   if (modal) {
     modal.classList.add('active');
@@ -643,6 +644,7 @@ function closeModal() {
 }
 
 function goToStep(stepNumber) {
+  setTimeout(() => { if (window.lucide) window.lucide.createIcons(); }, 10);
   modalCurrentStep = stepNumber;
   const steps = [1, 2, 3];
 
