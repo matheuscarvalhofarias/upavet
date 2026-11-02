@@ -570,3 +570,80 @@ svg {
   width: 0.875rem;
   height: 0.875rem;
 }
+
+
+/* ==========================================================================
+   MODAL RESPONSIVO (DESKTOP CARD & FULL-SCREEN MOBILE)
+   Desktop: Card centralizado max-w-xl com cantos arredondados e backdrop blur.
+   Mobile (<640px): Full-screen total (100dvh), sem cortes nem barras pretas.
+   ========================================================================== */
+
+#booking-modal.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(56, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow-y: auto;
+}
+
+#booking-modal .modal-content {
+  width: 100%;
+  max-width: 36rem;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 639px) {
+  #booking-modal.modal-overlay {
+    padding: 0 !important;
+    background-color: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    align-items: stretch !important;
+  }
+
+  #booking-modal .modal-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    min-height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: translateY(100%) !important;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  #booking-modal.modal-overlay.active .modal-content {
+    transform: translateY(0) !important;
+  }
+}
+
+
+/* Scrollbar invisível e fluida no modal */
+#booking-modal::-webkit-scrollbar,
+#modal-wizard-container::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#booking-modal,
+#modal-wizard-container {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}

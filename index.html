@@ -1988,13 +1988,13 @@
 
   <!-- MODAL DE AGENDAMENTO (3 PASSOS COM WHATSAPP) -->
   <div id="booking-modal"
-    class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#380000]/75 backdrop-blur-md">
+    class="modal-overlay fixed inset-0 z-50 p-0 sm:p-4 bg-white sm:bg-[#380000]/75 sm:backdrop-blur-md flex flex-col sm:flex-row sm:items-center sm:justify-center overflow-hidden sm:overflow-y-auto">
 
     <div
-      class="modal-content glass-card bg-white w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-[#e4e4e7] my-auto max-h-[92vh] flex flex-col">
+      class="modal-content glass-card bg-white w-full h-full sm:h-auto sm:max-w-xl rounded-none sm:rounded-3xl border-0 sm:border sm:border-[#e4e4e7] shadow-none sm:shadow-2xl flex flex-col flex-1 sm:flex-initial min-h-[100dvh] sm:min-h-0 sm:max-h-[90vh] overflow-hidden">
 
       <!-- Modal Header -->
-      <div class="bg-gradient-to-r from-[#520000] to-[#8B0000] text-white p-6 relative">
+      <div class="bg-gradient-to-r from-[#520000] to-[#8B0000] text-white px-4 py-3.5 sm:p-6 shrink-0 relative pt-[max(0.875rem,env(safe-area-inset-top))] sm:pt-6">
         <button id="btn-close-modal"
           class="absolute top-5 right-5 text-zinc-400 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors">
           <i data-lucide="x" class="w-5 h-5"></i>
@@ -2002,14 +2002,14 @@
         <span class="text-[11px] font-black uppercase tracking-widest text-amber-300 flex items-center gap-1.5">
           <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Agendamento Rápido
         </span>
-        <h3 class="text-2xl font-black font-display mt-1">Reserve o atendimento do seu pet</h3>
+        <h3 class="text-lg sm:text-2xl font-black font-display mt-0.5 leading-snug">Reserve o atendimento do seu pet</h3>
       </div>
 
       <!-- Step Wizard Body -->
-      <div id="modal-wizard-container" class="p-5 sm:p-8 overflow-y-auto overscroll-contain flex-1">
+      <div id="modal-wizard-container" class="px-4 py-5 sm:p-8 overflow-y-auto overscroll-contain flex-1 flex flex-col pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:pb-8">
 
         <!-- Step Progress Indicator -->
-        <div class="flex items-center justify-between mb-8 relative">
+        <div class="flex items-center justify-between mb-5 sm:mb-8 relative shrink-0">
           <div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-0.5 bg-stone-200 -z-0"></div>
 
           <div class="relative z-10 flex flex-col items-center">
@@ -2038,8 +2038,9 @@
         </div>
 
         <!-- STEP 1: PET INFO -->
-        <div id="modal-panel-step-1" class="space-y-4">
-          <div class="grid grid-cols-2 gap-4">
+        <div id="modal-panel-step-1" class="space-y-4 flex-1 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
             <div>
               <label class="block text-xs font-bold text-[#12253B] mb-1">
                 Nome do Pet <span class="text-red-500">*</span>
@@ -2080,9 +2081,10 @@
             </select>
           </div>
 
-          <div class="pt-4 flex justify-end">
+          </div>
+          <div class="pt-4 mt-auto border-t border-stone-100 flex justify-end">
             <button id="modal-btn-step-1-next" type="button"
-              class="bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-xs px-6 py-3 rounded-xl shadow transition-all flex items-center gap-1.5 active:scale-95">
+              class="w-full sm:w-auto bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow transition-all flex items-center justify-center gap-2 active:scale-95">
               <span>Continuar</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </button>
@@ -2090,7 +2092,8 @@
         </div>
 
         <!-- STEP 2: DATE & SERVICES -->
-        <div id="modal-panel-step-2" class="space-y-4 hidden">
+        <div id="modal-panel-step-2" class="space-y-4 hidden flex-1 flex flex-col justify-between">
+          <div class="space-y-4">
           <!-- MODO SERVIÇO ÚNICO (Card de Serviços - Não permite trocar de serviço) -->
           <div id="modal-single-service-box" class="p-3.5 rounded-2xl border border-[#8B0000]/25 bg-[#8B0000]/5 flex items-center justify-between shadow-xs">
             <div class="flex items-center gap-3">
@@ -2124,7 +2127,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
             <div>
               <label class="block text-xs font-bold text-[#12253B] mb-1">
                 Data de Preferência <span class="text-red-500">*</span>
@@ -2153,12 +2156,13 @@
               class="w-full bg-[#fafafa]/40 border border-[#e4e4e7] rounded-xl p-3 text-base sm:text-xs focus:border-[#8B0000] focus:bg-white focus:outline-none transition-all"></textarea>
           </div>
 
-          <div class="pt-4 flex justify-between">
-            <button id="modal-btn-step-2-back" type="button" class="text-stone-500 hover:text-stone-800 text-xs font-bold px-4 py-2 transition-colors">
+          </div>
+          <div class="pt-4 mt-auto border-t border-stone-100 flex items-center justify-between gap-3">
+            <button id="modal-btn-step-2-back" type="button" class="text-stone-500 hover:text-stone-800 text-sm font-bold px-4 py-3 transition-colors">
               Voltar
             </button>
             <button id="modal-btn-step-2-next" type="button"
-              class="bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-xs px-6 py-3 rounded-xl shadow transition-all flex items-center gap-1.5 active:scale-95">
+              class="flex-1 sm:flex-initial bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow transition-all flex items-center justify-center gap-2 active:scale-95">
               <span>Continuar</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </button>
@@ -2166,7 +2170,8 @@
         </div>
 
         <!-- STEP 3: TUTOR CONTACT & CONFIRM -->
-        <div id="modal-panel-step-3" class="space-y-4 hidden">
+        <div id="modal-panel-step-3" class="space-y-4 hidden flex-1 flex flex-col justify-between">
+          <div class="space-y-4">
           <div>
             <label class="block text-xs font-bold text-[#12253B] mb-1">
               Seu Nome Completo <span class="text-red-500">*</span>
@@ -2203,12 +2208,13 @@
             </div>
           </div>
 
-          <div class="pt-4 flex justify-between items-center">
-            <button id="modal-btn-step-3-back" type="button" class="text-stone-500 hover:text-stone-800 text-xs font-bold px-4 py-2 transition-colors">
+          </div>
+          <div class="pt-4 mt-auto border-t border-stone-100 flex items-center justify-between gap-3">
+            <button id="modal-btn-step-3-back" type="button" class="text-stone-500 hover:text-stone-800 text-sm font-bold px-4 py-3 transition-colors">
               Voltar
             </button>
             <button id="modal-btn-step-3-finish" type="button"
-              class="bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2 hover:scale-105 active:scale-95">
+              class="flex-1 sm:flex-initial bg-[#8B0000] hover:bg-[#a30000] text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 hover:scale-105 active:scale-95">
               <i data-lucide="calendar-check" class="w-4 h-4 text-white shrink-0"></i>
               <span>Confirmar Agendamento</span>
             </button>
