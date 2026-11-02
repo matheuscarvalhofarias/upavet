@@ -665,3 +665,45 @@ body.modal-open {
 #booking-modal.modal-overlay {
   z-index: 99999 !important;
 }
+
+
+/* ==========================================================================
+   MODAL MOBILE OVERFLOW & DATE/TIME INPUT REFINEMENTS
+   Impede rolagem horizontal e normaliza seletores nativos de data no mobile
+   ========================================================================== */
+#booking-modal,
+#booking-modal .modal-content,
+#modal-wizard-container,
+#modal-panel-step-1,
+#modal-panel-step-2,
+#modal-panel-step-3 {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Corrige inputs de data/hora no iOS e Android evitando expansão fora da tela */
+input[type="date"],
+input[type="time"] {
+  max-width: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  overflow: hidden !important;
+  text-align: left;
+}
+
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left !important;
+  min-height: 1.25em !important;
+  max-width: 100% !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  opacity: 0.75;
+}
