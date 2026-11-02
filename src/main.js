@@ -507,6 +507,14 @@ function initBookingModal() {
     closeBtn.addEventListener('click', closeModal);
   }
 
+  document.querySelectorAll('.btn-cancel-modal').forEach(btn => {
+    btn.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
   // Click outside to close
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
@@ -625,13 +633,24 @@ function initBookingModal() {
   }
 }
 
+let bodyScrollTop = 0;
+
 function openModal() {
-  if (window.lucide) window.lucide.createIcons(); // modal refresh
+  bodyScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+  // Trava definitiva do fundo no iOS Safari e Android contra scroll fantasma
+  document.body.style.position = 'fixed';
+  document.body.style.top = '-' + bodyScrollTop + 'px';
+  document.body.style.left = '0';
+  document.body.style.width = '100%';
+  document.body.style.overflow = 'hidden';
+  document.documentElement.classList.add('modal-open');
+
   const modal = document.getElementById('booking-modal');
   if (modal) {
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
     goToStep(1);
+    if (window.lucide) window.lucide.createIcons();
   }
 }
 
@@ -639,8 +658,16 @@ function closeModal() {
   const modal = document.getElementById('booking-modal');
   if (modal) {
     modal.classList.remove('active');
-    document.body.style.overflow = '';
   }
+
+  // Restaura a posição exata da página sem saltos
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.width = '';
+  document.body.style.overflow = '';
+  document.documentElement.classList.remove('modal-open');
+  window.scrollTo(0, bodyScrollTop);
 }
 
 function goToStep(stepNumber) {

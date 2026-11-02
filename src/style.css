@@ -581,7 +581,7 @@ svg {
 #booking-modal.modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 50;
+  z-index: 99999 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -646,4 +646,22 @@ svg {
 #modal-wizard-container {
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+}
+
+
+/* ==========================================================================
+   SCROLL LOCK QUANDO O MODAL ESTIVER ABERTO
+   Garante que o fundo fique totalmente imóvel no iOS Safari e Android.
+   ========================================================================== */
+html.modal-open,
+body.modal-open {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none !important;
+  overscroll-behavior: none !important;
+  -webkit-overflow-scrolling: auto !important;
+}
+
+#booking-modal.modal-overlay {
+  z-index: 99999 !important;
 }
