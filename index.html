@@ -31,11 +31,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700&family=Roboto:wght@300;400;500;700;900&display=optional"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=optional"
     media="print" onload="this.media='all'">
   <noscript>
     <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap">
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap">
   </noscript>
 
   <!-- Compiled Tailwind CSS & Custom Stylesheet -->
@@ -428,7 +428,7 @@
         </div>
 
         <!-- Hero Visual Showcase (Grounded Cutout PNG) -->
-        <div class="lg:col-span-5 relative flex items-end justify-center lg:justify-end self-end w-full">
+        <div class="lg:col-span-5 relative flex items-end justify-center lg:justify-end self-end w-full min-h-[480px] sm:min-h-[560px] lg:min-h-[620px]">
 
           <!-- Ambient backlight glow behind the characters -->
           <div
@@ -457,7 +457,8 @@
 
           <!-- Grounded Cutout Image -->
           <picture class="relative z-10 flex items-end justify-center lg:justify-end w-full">
-            <source srcset="assets/hero.webp" type="image/webp">
+            <source srcset="assets/hero-mobile.webp" type="image/webp" media="(max-width: 640px)">
+            <source srcset="assets/hero.webp" type="image/webp" media="(min-width: 641px)">
             <img src="assets/hero.png" alt="Equipe veterinária e pets em Brazlândia - DF"
               width="1200" height="1498" loading="eager" fetchpriority="high" decoding="async"
               class="w-auto max-w-[340px] sm:max-w-[420px] lg:max-w-[500px] xl:max-w-[540px] max-h-[480px] sm:max-h-[560px] lg:max-h-[620px] object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)] select-none pointer-events-none block -mb-px">
